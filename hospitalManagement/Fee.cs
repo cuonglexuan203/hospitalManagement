@@ -11,7 +11,7 @@ namespace hospitalManagement
         //Field
         private float drugCosts;
 
-        private float treatmnetCosts;
+        private float treatmentCosts;
 
         private float advanceFee;
 
@@ -21,16 +21,16 @@ namespace hospitalManagement
         // Dynamic field
         // Properties
         public float DrugCosts { get => drugCosts; set => drugCosts = value; }
-        public float TreatmnetCosts { get => treatmnetCosts; set => treatmnetCosts = value; }
+        public float TreatmentCosts { get => treatmentCosts; set => treatmentCosts = value; }
         public float AdvanceFee { get => advanceFee; set => advanceFee = value; }
         // Constructors
         public Fee() { }
         public Fee(float drugCosts
-                    , float treatmnetCosts
+                    , float treatmentCosts
                     , float advanceFee)
         {
             DrugCosts = drugCosts;
-            TreatmnetCosts = treatmnetCosts;
+            TreatmentCosts = treatmentCosts;
             AdvanceFee = advanceFee;
 
         }
@@ -43,18 +43,20 @@ namespace hospitalManagement
             System.Console.WriteLine("The drug costs: ");
             DrugCosts = float.Parse(Console.ReadLine());
             System.Console.WriteLine("The treatmnet costs: ");
-            TreatmnetCosts = float.Parse(Console.ReadLine());
+            TreatmentCosts = float.Parse(Console.ReadLine());
             System.Console.WriteLine("The advance fee: ");
             AdvanceFee = float.Parse(Console.ReadLine());
         }
         public void output()
         {
             System.Console.WriteLine($"The drug costs: {DrugCosts}");
-            System.Console.WriteLine($"The treatmnet costs: {TreatmnetCosts}");
+            System.Console.WriteLine($"The treatmnet costs: {TreatmentCosts}");
             System.Console.WriteLine($"The advance fee: {AdvanceFee}");
         }
         // General method
         // Other method
         // Overriding
+        public override string ToString()
+        => $"\nThe drug cost: {DrugCosts}" + $"\nThe treatment cost: {TreatmentCosts}" + $"\nThe advance fee: {AdvanceFee}";
     }
 }

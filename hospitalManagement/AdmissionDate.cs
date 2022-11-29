@@ -55,5 +55,7 @@ namespace hospitalManagement
         // General method
         // Other method
         // Overriding
+        public override string ToString()
+            => $"\nHospital admission date: {HospitalAdmissionDate}" + $"\nHospital discharge date: {HospitalDischargeDate}";
     }
 }

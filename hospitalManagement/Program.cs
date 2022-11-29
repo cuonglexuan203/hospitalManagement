@@ -10,7 +10,6 @@ namespace hospitalManagement
     {
         static void Main(string[] args)
         {
-            Doctor a;
 
         }
     }

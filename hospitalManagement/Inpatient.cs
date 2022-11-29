@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal class Inpatient
+    internal class Inpatient : Patient
     {
     }
 }

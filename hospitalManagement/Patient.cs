@@ -1,144 +1,180 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace HospitalManagement
+namespace hospitalManagement
 {
-    internal class Patient
+    internal abstract class Patient
     {
         //Field	
         private string id;
 
         // Infor field	
-        private string firstname;
-        private string lastname;
-        private string dateofbirth;
+        private string firstName;
+        private string lastName;
+        private string dateOfBirth;
         private string ethnic;
         private string religion;
         private string nationality;
-        private string numberofhealthinsurance;
+        private string numberOfHealthInsurance;
         private string career;
         private string address;
         private string phonenumber;
         private int gentle;
         private string relative;
-        private string phonenumberofrelative;
+        private string phoneNumberOfRelative;
 
         // Management field
-        private string dateofhosspitaladmission;
-        private string dateoghospitaldischarge;
-        private long medicalexaminationfee;
-        private long drugcosts;
-        private long treatmnetcosts;
-        private long advancefee;
+        private Fee fees;
+        private AdmissionDate admissionDates;
+
         //private long 
         // Dynamic field	
 
         // Properties	
 
-        public string Id
-        {
-            get { return this.id; }
-            set { this.id = value; }
-        }
 
-        public string Firstname
-        {
-            get { return this.firstname; }
-            set { this.firstname = value; }
-        }
-        public string Lastname
-        {
-            get { return this.lastname; }
-            set { this.lastname = value; }
-        }
-        public string Dateofbirth
-        {
-            get { return this.dateofbirth; }
-            set { this.dateofbirth = value; }
-        }
-
-        public string Ethnic
-        {
-            get { return this.ethnic; }
-            set { this.ethnic = value; }
-        }
-        public string Religion
-        {
-            get { return this.religion; }
-            set { this.religion = value; }
-        }
-        public string Nationality
-        {
-            get { return this.nationality; }
-            set { this.nationality = value; }
-        }
-        public string Numberofhealthinsurance
-        {
-            get { return this.numberofhealthinsurance; }
-            set { this.id = value; }
-        }
-        public string Career
-        {
-            get { return this.career; }
-            set { this.career = value; }
-        }
-        public string Address
-        {
-            get { return this.address; }
-            set { this.address = value; }
-        }
-        public string Phonenumber
-        {
-            get { return this.phonenumber; }
-            set { this.phonenumber = value; }
-        }
-        public int Gentle
-        {
-            get { return this.gentle; }
-            set { this.gentle = value; }
-        }
-        public string Relative
-        {
-            get { return this.relative; }
-            set { this.relative = value; }
-        }
-        public string Phonenumberofrelative
-        {
-            get { return this.phonenumberofrelative; }
-            set { this.phonenumberofrelative = value; }
-        }
-
-
+        public string FirstName { get => firstName; set => firstName = value; }
+        public string LastName { get => lastName; set => lastName = value; }
+        public string DateOfBirth { get => dateOfBirth; set => dateOfBirth = value; }
+        public string Ethnic { get => ethnic; set => ethnic = value; }
+        public string Religion { get => religion; set => religion = value; }
+        public string Nationality { get => nationality; set => nationality = value; }
+        public string NumberOfHealthInsurance { get => numberOfHealthInsurance; set => numberOfHealthInsurance = value; }
+        public string Career { get => career; set => career = value; }
+        public string Address { get => address; set => address = value; }
+        public string Phonenumber { get => phonenumber; set => phonenumber = value; }
+        public int Gentle { get => gentle; set => gentle = value; }
+        public string Relative { get => relative; set => relative = value; }
+        public string PhoneNumberOfRelative { get => phoneNumberOfRelative; set => phoneNumberOfRelative = value; }
+        internal Fee Fees { get => fees; set => fees = value; }
+        internal AdmissionDate AdmissionDates { get => admissionDates; set => admissionDates = value; }
+        //
         // Constructors	
-        public Patient()
-        {
 
-        }
+        // public Patient(string firstName
+        // , string lastName
+        // , string dateOfBirth
+        // , string ethnic
+        // , string religion
+        // , string nationality
+        // , string numberOfHealthInsurance
+        // , string career
+        // , string address
+        // , string phonenumber
+        // , int gentle
+        // , string relative
+        // , string phoneNumberOfRelative
+        // , Fee fees
+        // , AdmissionDate admissionDates)
+        // {
+        //     this.firstName = firstName;
+        //     this.lastName = lastName;
+        //     this.dateOfBirth = dateOfBirth;
+        //     this.ethnic = ethnic;
+        //     this.religion = religion;
+        //     this.nationality = nationality;
+        //     this.numberOfHealthInsurance = numberOfHealthInsurance;
+        //     this.career = career;
+        //     this.address = address;
+        //     this.phonenumber = phonenumber;
+        //     this.gentle = gentle;
+        //     this.relative = relative;
+        //     this.phoneNumberOfRelative = phoneNumberOfRelative;
+        //     this.fees = fees;
+        //     this.admissionDates = admissionDates;
+        // }
 
 
         // Destructors	
-        ~Patient() { }
-
         // Methods	
 
         // in, output
-
-        void Input1(string firstName, string lastName, string dateOfBirth, string ethenic, string religion, string nationality, string numOfHealthInsurance, string career, string address, string phoneNum, int gender)
+        public void input(string firstName,
+                     string lastName,
+                     string dateOfBirth,
+                     string ethnic,
+                     string religion,
+                     string nationality,
+                     string numberOfHealthInsurance,
+                     string career,
+                     string address,
+                     string phonenumber,
+                     int gentle,
+                     string relative,
+                     string phoneNumberOfRelative,
+                     Fee fees,
+                     AdmissionDate admissionDates)
         {
-            this.Firstname = firstName;
-            this.Lastname = lastname;
-            this.Dateofbirth = dateOfBirth;
-            this.Ethnic = ethenic;
-            this.Religion = religion;
-            this.Nationality = nationality;
-            this.Numberofhealthinsurance = numOfHealthInsurance;
-            this.Career = career;
-            this.Address = address;
-            this.Phonenumber = phoneNum;
-            this.Gentle = gender;
+            FirstName = firstName;
+            LastName = lastName;
+            DateOfBirth = dateOfBirth;
+            Ethnic = ethnic;
+            Religion = religion;
+            Nationality = nationality;
+            NumberOfHealthInsurance = numberOfHealthInsurance;
+            Career = career;
+            Address = address;
+            Phonenumber = phonenumber;
+            Gentle = gentle;
+            Relative = relative;
+            PhoneNumberOfRelative = phoneNumberOfRelative;
+            Fees = fees;
+            AdmissionDates = admissionDates;
         }
-
+        public void input()
+        {
+            Console.Write("FirstName: ");
+            FirstName = Console.ReadLine();
+            Console.Write("LastName: ");
+            LastName = Console.ReadLine();
+            Console.Write("DateOfBirth: ");
+            DateOfBirth = Console.ReadLine();
+            Console.Write("Ethnic: ");
+            Ethnic = Console.ReadLine();
+            Console.Write("Religion: ");
+            Religion = Console.ReadLine();
+            Console.Write("Nationality: ");
+            Nationality = Console.ReadLine();
+            Console.Write("NumberOfHealthInsurance: ");
+            NumberOfHealthInsurance = Console.ReadLine();
+            Console.Write("Career: ");
+            Career = Console.ReadLine();
+            Console.Write("Address: ");
+            Address = Console.ReadLine();
+            Console.Write("Phonenumber: ");
+            Phonenumber = Console.ReadLine();
+            Console.Write("Gentle: ");
+            Gentle = Int32.Parse(Console.ReadLine()) == 0 ? 0 : 1;
+            Console.Write("Relative: ");
+            Relative = Console.ReadLine();
+            Console.Write("PhoneNumberOfRelative: ");
+            PhoneNumberOfRelative = Console.ReadLine();
+            Console.WriteLine("Fees: ");
+            Fees.input();
+            Console.WriteLine("AdmissionDates: ");
+            AdmissionDates.input();
+        }
+        public void output()
+        {
+            Console.WriteLine($"FirstName: {FirstName} ");
+            Console.WriteLine($"LastName: {LastName} ");
+            Console.WriteLine($"DateOfBirth: {DateOfBirth} ");
+            Console.WriteLine($"Ethnic: {Ethnic} ");
+            Console.WriteLine($"Religion: {Religion} ");
+            Console.WriteLine($"Nationality: {Nationality} ");
+            Console.WriteLine($"NumberOfHealthInsurance: {NumberOfHealthInsurance} ");
+            Console.WriteLine($"Career: {Career} ");
+            Console.WriteLine($"Address: {Address} ");
+            Console.WriteLine($"Phonenumber: {Phonenumber} ");
+            Console.WriteLine($"Gentle: {Gentle} ");
+            Console.WriteLine($"Relative: {Relative} ");
+            Console.WriteLine($"PhoneNumberOfRelative: {PhoneNumberOfRelative} ");
+            Console.WriteLine($"Fees: {Fees} ");
+            Console.WriteLine($"AdmissionDates: {AdmissionDates} ");
+        }
         // General method
 
         // Other method	

@@ -8,5 +8,17 @@ namespace hospitalManagement
 {
     internal class Outpatient : Patient
     {
+        //Field
+        // Infor field
+        //  Management field
+        // Dynamic field
+        // Properties
+        // Constructors
+        // Destructors
+        // Methods
+        // in, output
+        // General method
+        // Other method
+        // Overriding
     }
 }

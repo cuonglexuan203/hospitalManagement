@@ -174,7 +174,7 @@ namespace hospitalManagement
 
         public void UpdateInformation()
         {
-            throw new NotImplementedException();
+            this.Input();
         }
         // Overriding
 

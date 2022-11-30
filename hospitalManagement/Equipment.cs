@@ -21,9 +21,6 @@ namespace hospitalManagement
         private string origin;
 
 
-
-
-
         //  Management field
         // Dynamic field
         // Properties

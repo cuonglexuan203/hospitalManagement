@@ -11,9 +11,8 @@ namespace hospitalManagement
     {
         static void Main(string[] args)
         {
-            Fee a = new Fee();
-            a.DrugCosts = 5;
-            Console.WriteLine(a);
+
+            Equipment a = new MovementEquipment();
         }
     }
 }

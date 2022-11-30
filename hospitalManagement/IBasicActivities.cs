@@ -15,7 +15,7 @@ namespace hospitalManagement
 
         void Add();
         void UpdateInformation();
-        void Remove();
+        void Remove(string id);
         T Get();
 
 

@@ -85,7 +85,26 @@ namespace hospitalManagement
 
 
         // General method
-
+        public Medicine FindMedicine(string id)
+        {
+            foreach (Medicine m in Medicines)
+            {
+                if (m.id == id)
+                {
+                    return m;
+                }
+            }
+        }
+        public Equipment FindEquipment(string id)
+        {
+            foreach (Equipment e in Equipments)
+            {
+                if (e.id == id)
+                {
+                    return e;
+                }
+            }
+        }
         // Other method
         public void ShowInformation()
         => this.Output();

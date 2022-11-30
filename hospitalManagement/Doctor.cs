@@ -202,11 +202,6 @@ namespace hospitalManagement
         }
 
 
-
-
-
-
-
         Doctor IBasicActivities<Doctor>.Get()
         => this;
         // Overriding

@@ -8,5 +8,6 @@ namespace hospitalManagement
 {
     internal class Faculty
     {
+
     }
 }

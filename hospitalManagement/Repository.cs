@@ -120,7 +120,6 @@ namespace hospitalManagement
             throw new NotImplementedException();
         }
 
-
         Repository IBasicActivities<Repository>.Get()
         => this;
         // Overriding

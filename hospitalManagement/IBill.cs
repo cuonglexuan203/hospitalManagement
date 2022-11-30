@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal interface IRegistration
+    internal interface IBill
     {
-        //
-        void Register();
-
+        void ExportBill();
+        float CalcBill(); // calculate salary if doctor, calculate fee if patient
     }
 }

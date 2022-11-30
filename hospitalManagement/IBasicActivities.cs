@@ -8,13 +8,11 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal interface IBasicActivities : IRegistration
+    internal interface IBasicActivities 
     {
         // 
         void ShowInformation();
-        void ExportBill();
-        float CalcBill(); // calculate salary if doctor, calculate fee if patient
-
+       
         void UpdateInformation();
 
 

@@ -188,10 +188,7 @@ namespace hospitalManagement
         // General method
 
         // Other method	
-        public void Register()
-        {
-            throw new NotImplementedException();
-        }
+
 
         public void ShowInformation()
         {
@@ -208,6 +205,21 @@ namespace hospitalManagement
         }
 
         public void UpdateInformation()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Add()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Remove()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Get()
         {
             throw new NotImplementedException();
         }

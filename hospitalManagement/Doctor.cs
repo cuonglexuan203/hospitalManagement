@@ -162,7 +162,7 @@ namespace hospitalManagement
             Console.WriteLine("The patient list: ");
             //foreach (string i in PatientIdList)
             //{
-            //    Console.WriteLine();
+            //  find
             //}
             Console.WriteLine("AdmissionDates: {0}", AdmissionDates);
             Console.WriteLine("Salaries: {0}", Salaries);
@@ -176,10 +176,7 @@ namespace hospitalManagement
             this.Output();
         }
 
-        public void Register()
-        {
-            this.Input();
-        }
+
         public void ExportBill()
         {
 
@@ -191,8 +188,27 @@ namespace hospitalManagement
         public void UpdateInformation()
         {
             this.Input();
+
+        }
+
+        public void Add()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Remove()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Get()
+        {
+            throw new NotImplementedException();
         }
         // Overriding
+        //public override string ToString()
+        //{
 
+        //}
     }
 }

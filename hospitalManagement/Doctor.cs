@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal class Doctor : IBasicActivities<Doctor>
+    internal class Doctor : IBasicActivities<Doctor>, IBill
     {
         //Field
         private string doctorId;
@@ -37,7 +37,7 @@ namespace hospitalManagement
 
         private List<string> patientIdList;
 
-        private AdmissionDate admissionDates;
+        private ComeAndLeaveDate admissionDates;
 
         private Salary salaries;
 
@@ -57,7 +57,7 @@ namespace hospitalManagement
         public string FacultyId { get => facultyId; set => facultyId = value; }
         public string DepartmentId { get => departmentId; set => departmentId = value; }
         public bool State { get => state; set => state = value; }
-        public AdmissionDate AdmissionDates { get => admissionDates; set => admissionDates = value; }
+        public ComeAndLeaveDate AdmissionDates { get => admissionDates; set => admissionDates = value; }
         public Salary Salaries { get => salaries; set => salaries = value; }
         public List<string> PatientIdList { get => patientIdList; set => patientIdList = value; }
 
@@ -77,7 +77,7 @@ namespace hospitalManagement
         , string departmentId
         , bool state
         , List<string> patientIdList
-        , AdmissionDate admissionDates
+        , ComeAndLeaveDate admissionDates
         , Salary salaries)
         {
             this.doctorId = doctorId;
@@ -185,19 +185,17 @@ namespace hospitalManagement
         public float CalcBill()
         => salaries.Basic + salaries.Bonus + salaries.Allowance;
 
-        public void UpdateInformation()
-        {
-            this.Input();
-
-        }
-
         public void Add()
         {
             throw new NotImplementedException();
         }
 
+        public void UpdateInformation()
+        {
+            throw new NotImplementedException();
+        }
 
-        public void Remove(string id)
+        public bool Remove(string id)
         {
             throw new NotImplementedException();
         }
@@ -206,6 +204,8 @@ namespace hospitalManagement
         {
             throw new NotImplementedException();
         }
+
+
 
 
 

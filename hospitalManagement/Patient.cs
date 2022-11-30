@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal class Patient : IBasicActivities
+    internal class Patient : IBasicActivities<Patient>
     {
         //Field	
         private string id;
@@ -29,7 +29,7 @@ namespace hospitalManagement
 
         // Management field
         private Fee fees;
-        private AdmissionDate admissionDates;
+        private ComeAndLeaveDate admissionDates;
 
         //private long 
         // Dynamic field	
@@ -52,7 +52,9 @@ namespace hospitalManagement
         public string PhoneNumberOfRelative { get => phoneNumberOfRelative; set => phoneNumberOfRelative = value; }
         public string Id { get => id; set => id = value; }
         internal Fee Fees { get => fees; set => fees = value; }
-        internal AdmissionDate AdmissionDates { get => admissionDates; set => admissionDates = value; }
+        internal ComeAndLeaveDate AdmissionDates { get => admissionDates; set => admissionDates = value; }
+
+
 
 
 
@@ -111,7 +113,7 @@ namespace hospitalManagement
                      string relative,
                      string phoneNumberOfRelative,
                      Fee fees,
-                     AdmissionDate admissionDates)
+                     ComeAndLeaveDate admissionDates)
         {
             FirstName = firstName;
             LastName = lastName;
@@ -190,16 +192,14 @@ namespace hospitalManagement
         // Other method	
 
 
-        public void ShowInformation()
-        {
-            throw new NotImplementedException();
-        }
-        public float CalcBill()
+
+        // Overriding	
+        public bool Remove(string id)
         {
             throw new NotImplementedException();
         }
 
-        public void ExportBill()
+        public void ShowInformation()
         {
             throw new NotImplementedException();
         }
@@ -214,16 +214,9 @@ namespace hospitalManagement
             throw new NotImplementedException();
         }
 
-        public void Remove()
+        public Patient Get()
         {
             throw new NotImplementedException();
         }
-
-        public void Get()
-        {
-            throw new NotImplementedException();
-        }
-        // Overriding	
-
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    public class AdmissionDate
+    public class ComeAndLeaveDate
     {
         //Field
         private string hospitalAdmissionDate;
@@ -22,14 +22,14 @@ namespace hospitalManagement
         public string HospitalDischargeDate { get => hospitalDischargeDate; set => hospitalDischargeDate = value; }
 
         // Constructors
-        public AdmissionDate() { }
-        public AdmissionDate(string hospitalAdmissionDate, string hospitalDischargeDate)
+        public ComeAndLeaveDate() { }
+        public ComeAndLeaveDate(string hospitalAdmissionDate, string hospitalDischargeDate)
         {
             HospitalAdmissionDate = hospitalAdmissionDate;
             HospitalDischargeDate = hospitalDischargeDate;
         }
         // Destructors
-        ~AdmissionDate() { }
+        ~ComeAndLeaveDate() { }
 
         // Operators
         // Methods

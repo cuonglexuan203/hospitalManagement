@@ -17,9 +17,7 @@ namespace hospitalManagement
         private string description;
         private string room;
         //  Management fields
-        private List<Medicine> medicines;
         private List<Equipment> equipments;
-
 
         // Dynamic field
         // Properties
@@ -27,17 +25,18 @@ namespace hospitalManagement
         public string Name { get => name; set => name = value; }
         public string Description { get => description; set => description = value; }
         public string Room { get => room; set => room = value; }
-        internal List<Medicine> Medicines { get => medicines; set => medicines = value; }
         internal List<Equipment> Equipments { get => equipments; set => equipments = value; }
         // Constructors
-        public Repository() { }
-        public Repository(string id, string name, string description, string room, List<Medicine> medicines, List<Equipment> equipments)
+        public Repository()
+        {
+            equipments = new List<Equipment>();
+        }
+        public Repository(string id, string name, string description, string room, List<Equipment> equipments)
         {
             this.Id = id;
             this.Name = name;
             this.Description = description;
             this.Room = room;
-            this.Medicines = medicines;
             this.Equipments = equipments;
         }
 
@@ -57,10 +56,15 @@ namespace hospitalManagement
             Description = Console.ReadLine();
             Console.Write("Room: ");
             Room = Console.ReadLine();
-            Console.WriteLine("Medicines: ");
-            Medicines.Input();
-            Console.WriteLine("Equipments: ");
-            Equipments.Input();
+            Console.WriteLine("Number of equipment: ");
+            int n = Int32.Parse(Console.ReadLine());
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine($"Equiment #{i}");
+                Equipment temp = new Equipment();
+                temp.Input();
+                equipments.Add(temp);
+            }
 
         }
         public void Output()
@@ -69,11 +73,6 @@ namespace hospitalManagement
             Console.WriteLine($"Name: {Name}");
             Console.WriteLine($"Description: ");
             Console.WriteLine($"Room: {Room}");
-            Console.WriteLine("The medicine list:");
-            foreach (Medicine i in Medicines)
-            {
-                Console.WriteLine(i);
-            }
             Console.WriteLine("The equipment list: ");
             foreach (Equipment e in Equipments)
             {
@@ -85,25 +84,17 @@ namespace hospitalManagement
 
 
         // General method
-        public Medicine FindMedicine(string id)
-        {
-            foreach (Medicine m in Medicines)
-            {
-                if (m.id == id)
-                {
-                    return m;
-                }
-            }
-        }
+
         public Equipment FindEquipment(string id)
         {
             foreach (Equipment e in Equipments)
             {
-                if (e.id == id)
+                if (e.Id == id)
                 {
                     return e;
                 }
             }
+            return null;
         }
         // Other method
         public void ShowInformation()
@@ -115,13 +106,23 @@ namespace hospitalManagement
         public void UpdateInformation()
         => this.Input();
 
-        public void Remove()
+
+        public bool Remove(string id)
         {
-            throw new NotImplementedException();
+            foreach (Equipment e in Equipments)
+            {
+                if (e.Id == id)
+                {
+                    equipments.Remove(e);
+                    return true;
+                }
+            }
+            return false;
         }
 
         Repository IBasicActivities<Repository>.Get()
         => this;
+
         // Overriding
     }
 }

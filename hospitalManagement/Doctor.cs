@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal class Doctor : IBasicActivities
+    internal class Doctor : IBasicActivities<Doctor>
     {
         //Field
         private string doctorId;
@@ -201,10 +201,14 @@ namespace hospitalManagement
             throw new NotImplementedException();
         }
 
-        public void Get()
-        {
-            throw new NotImplementedException();
-        }
+
+
+
+
+
+
+        Doctor IBasicActivities<Doctor>.Get()
+        => this;
         // Overriding
         //public override string ToString()
         //{

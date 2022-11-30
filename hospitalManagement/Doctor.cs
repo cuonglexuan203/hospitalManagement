@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal class Doctor
+    internal class Doctor : IBasicActivities
     {
         //Field
         private string doctorId;
@@ -97,8 +97,8 @@ namespace hospitalManagement
 
         // Destructors
         // Methods
-        // in, output
-        public void input()
+        // in, Output
+        public void Input()
         {
             Console.Write("DoctorId: ");
             DoctorId = Console.ReadLine();
@@ -125,12 +125,13 @@ namespace hospitalManagement
             Console.Write("State(1: free, other: 0): ");
             State = Int32.Parse(Console.ReadLine()) == 1 ? true : false;
             Console.Write("AdmissionDates: ");
-            AdmissionDates.input();
+            AdmissionDates.Input();
             Console.Write("Salaries: ");
-            Salaries.input();
+            Salaries.Input();
 
         }
-        public void output(){
+        public void Output()
+        {
             Console.WriteLine("DoctorId: {0}", DoctorId);
             Console.WriteLine("FirstName: {0}", FirstName);
             Console.WriteLine("LastName: {0}", LastName);
@@ -146,8 +147,18 @@ namespace hospitalManagement
             Console.WriteLine("AdmissionDates: {0}", AdmissionDates);
             Console.WriteLine("Salaries: {0}", Salaries);
         }
+
         // General method
         // Other method
+        public void ShowInformation()
+        {
+
+        }
+
+        public void Register()
+        {
+            this.Input();
+        }
         // Overriding
     }
 }

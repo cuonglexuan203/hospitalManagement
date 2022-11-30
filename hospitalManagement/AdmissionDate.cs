@@ -33,21 +33,21 @@ namespace hospitalManagement
 
         // Operators
         // Methods
-        // in, output
-        public void input()
+        // in, Output
+        public void Input()
         {
             Console.Write("hospitalAdmissionDate: ");
             HospitalAdmissionDate = Console.ReadLine();
             Console.Write("hospitalDischargeDate: ");
             HospitalDischargeDate = Console.ReadLine();
         }
-        public void input(string hospitalAdmissionDate
+        public void Input(string hospitalAdmissionDate
  , string hospitalDischargeDate)
         {
             HospitalAdmissionDate = hospitalAdmissionDate;
             HospitalDischargeDate = hospitalDischargeDate;
         }
-        public void output()
+        public void Output()
         {
             Console.WriteLine($"HospitalAdmissionDate: {HospitalAdmissionDate}");
             Console.WriteLine($"HospitalDischargeDate: {HospitalDischargeDate}");

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,9 @@ namespace hospitalManagement
     {
         static void Main(string[] args)
         {
-
+            Fee a = new Fee();
+            a.DrugCosts = 5;
+            Console.WriteLine(a);
         }
     }
 }

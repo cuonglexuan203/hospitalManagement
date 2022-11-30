@@ -44,12 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdmissionDate.cs" />
+    <Compile Include="IBasicActivities.cs" />
     <Compile Include="Doctor.cs" />
     <Compile Include="Equipment.cs" />
     <Compile Include="Faculty.cs" />
     <Compile Include="Fee.cs" />
     <Compile Include="Hospital.cs" />
     <Compile Include="Inpatient.cs" />
+    <Compile Include="IRegistration.cs" />
     <Compile Include="Medicine.cs" />
     <Compile Include="Outpatient.cs" />
     <Compile Include="Patient.cs" />

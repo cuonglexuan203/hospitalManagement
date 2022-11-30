@@ -128,6 +128,17 @@ namespace hospitalManagement
             DepartmentId = Console.ReadLine();
             Console.Write("State(1: free, other: 0): ");
             State = Int32.Parse(Console.ReadLine()) == 1 ? true : false;
+            Console.WriteLine("The patient list: ");
+            Console.Write("Number of current patient: ");
+            int n = Int32.Parse(Console.ReadLine());
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("Id: ");
+                string temp = Console.ReadLine();
+                PatientIdList.Add(temp);
+
+
+            }
             Console.Write("AdmissionDates: ");
             AdmissionDates.Input();
             Console.Write("Salaries: ");
@@ -148,6 +159,11 @@ namespace hospitalManagement
             Console.WriteLine("FacultyId: {0}", FacultyId);
             Console.WriteLine("DepartmentId: {0}", DepartmentId);
             Console.WriteLine("State: {0}", State);
+            Console.WriteLine("The patient list: ");
+            //foreach (string i in PatientIdList)
+            //{
+            //    Console.WriteLine();
+            //}
             Console.WriteLine("AdmissionDates: {0}", AdmissionDates);
             Console.WriteLine("Salaries: {0}", Salaries);
         }

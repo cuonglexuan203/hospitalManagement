@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal abstract class Patient : IBasicActivities
+    internal class Patient : IBasicActivities
     {
         //Field	
         private string id;

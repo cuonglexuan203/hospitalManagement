@@ -9,6 +9,8 @@ namespace hospitalManagement
     internal class Faculty
     {
         //Field
+        private List<Doctor> doctors;
+        private List<Doctor> patients;
         // Infor field
         //  Management field
         // Dynamic field

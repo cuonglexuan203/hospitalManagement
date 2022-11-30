@@ -196,14 +196,19 @@ namespace hospitalManagement
             throw new NotImplementedException();
         }
 
-        public void Remove()
+
+        public void Remove(string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Doctor Get()
         {
             throw new NotImplementedException();
         }
 
 
-        Doctor IBasicActivities<Doctor>.Get()
-        => this;
+
         // Overriding
         //public override string ToString()
         //{

@@ -53,42 +53,15 @@ namespace hospitalManagement
         internal AdmissionDate AdmissionDates { get => admissionDates; set => admissionDates = value; }
         //
         // Constructors	
+        public Patient()
+        {
 
-        // public Patient(string firstName
-        // , string lastName
-        // , string dateOfBirth
-        // , string ethnic
-        // , string religion
-        // , string nationality
-        // , string numberOfHealthInsurance
-        // , string career
-        // , string address
-        // , string phonenumber
-        // , int gentle
-        // , string relative
-        // , string phoneNumberOfRelative
-        // , Fee fees
-        // , AdmissionDate admissionDates)
-        // {
-        //     this.firstName = firstName;
-        //     this.lastName = lastName;
-        //     this.dateOfBirth = dateOfBirth;
-        //     this.ethnic = ethnic;
-        //     this.religion = religion;
-        //     this.nationality = nationality;
-        //     this.numberOfHealthInsurance = numberOfHealthInsurance;
-        //     this.career = career;
-        //     this.address = address;
-        //     this.phonenumber = phonenumber;
-        //     this.gentle = gentle;
-        //     this.relative = relative;
-        //     this.phoneNumberOfRelative = phoneNumberOfRelative;
-        //     this.fees = fees;
-        //     this.admissionDates = admissionDates;
-        // }
-
-
+        }
         // Destructors	
+        ~ Patient()
+        {
+
+        }
         // Methods	
 
         // in, output

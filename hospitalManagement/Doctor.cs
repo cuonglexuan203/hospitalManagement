@@ -35,6 +35,8 @@ namespace hospitalManagement
 
         private bool state;
 
+        private List<string> patientIdList;
+
         private AdmissionDate admissionDates;
 
         private Salary salaries;
@@ -57,6 +59,7 @@ namespace hospitalManagement
         public bool State { get => state; set => state = value; }
         public AdmissionDate AdmissionDates { get => admissionDates; set => admissionDates = value; }
         public Salary Salaries { get => salaries; set => salaries = value; }
+        public List<string> PatientIdList { get => patientIdList; set => patientIdList = value; }
 
         // Constructors
         public Doctor() { }
@@ -73,6 +76,7 @@ namespace hospitalManagement
         , string facultyId
         , string departmentId
         , bool state
+        , List<string> patientIdList
         , AdmissionDate admissionDates
         , Salary salaries)
         {
@@ -149,16 +153,30 @@ namespace hospitalManagement
         }
 
         // General method
+
         // Other method
         public void ShowInformation()
         {
-
+            this.Output();
         }
 
         public void Register()
         {
             this.Input();
         }
+        public void ExportBill()
+        {
+
+            Console.WriteLine($"The salary ( basis + bonus, allowance ): {CalcBill()}");
+        }
+        public float CalcBill()
+        => salaries.Basic + salaries.Bonus + salaries.Allowance;
+
+        public void UpdateInformation()
+        {
+            throw new NotImplementedException();
+        }
         // Overriding
+
     }
 }

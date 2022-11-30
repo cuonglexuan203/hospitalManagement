@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal abstract class Patient
+    internal abstract class Patient : IBasicActivities
     {
         //Field	
         private string id;
@@ -53,6 +53,9 @@ namespace hospitalManagement
         public string Id { get => id; set => id = value; }
         internal Fee Fees { get => fees; set => fees = value; }
         internal AdmissionDate AdmissionDates { get => admissionDates; set => admissionDates = value; }
+
+
+
         //
         // Constructors	
 
@@ -180,10 +183,34 @@ namespace hospitalManagement
             Console.WriteLine($"Fees: {Fees} ");
             Console.WriteLine($"AdmissionDates: {AdmissionDates} ");
         }
+
+
         // General method
 
         // Other method	
+        public void Register()
+        {
+            throw new NotImplementedException();
+        }
 
+        public void ShowInformation()
+        {
+            throw new NotImplementedException();
+        }
+        public float CalcBill()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ExportBill()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateInformation()
+        {
+            throw new NotImplementedException();
+        }
         // Overriding	
 
     }

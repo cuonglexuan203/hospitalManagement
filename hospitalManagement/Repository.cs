@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal class Repository
+    internal class Repository : IBasicActivities<Repository>
     {
 
         //Field
@@ -82,8 +82,28 @@ namespace hospitalManagement
             }
         }
 
+
+
         // General method
+
         // Other method
+        public void ShowInformation()
+        => this.Output();
+
+        public void Add()
+        => this.Input();
+
+        public void UpdateInformation()
+        => this.Input();
+
+        public void Remove()
+        {
+            throw new NotImplementedException();
+        }
+
+
+        Repository IBasicActivities<Repository>.Get()
+        => this;
         // Overriding
     }
 }

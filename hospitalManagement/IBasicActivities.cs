@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal interface IBasicActivities
+    internal interface IBasicActivities<T>
     {
         // 
         void ShowInformation();
@@ -16,7 +16,7 @@ namespace hospitalManagement
         void Add();
         void UpdateInformation();
         void Remove();
-        void Get();
+        T Get();
 
 
 

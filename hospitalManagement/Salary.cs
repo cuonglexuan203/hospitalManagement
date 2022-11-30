@@ -36,7 +36,7 @@ namespace hospitalManagement
         }
         // Methods
         // in, output
-        public void input()
+        public void Input()
         {
             Console.Write("Basic: ");
             Basic = float.Parse(Console.ReadLine());
@@ -45,7 +45,7 @@ namespace hospitalManagement
             Console.Write("Allowance: ");
             Allowance = float.Parse(Console.ReadLine());
         }
-        public void output()
+        public void Output()
         {
             Console.WriteLine("Basic: {0}", Basic);
             Console.WriteLine("Bonus: {0}", Bonus);

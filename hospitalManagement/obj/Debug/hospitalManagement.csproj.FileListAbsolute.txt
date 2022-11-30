@@ -1,0 +1,8 @@
+F:\SayHello\HCMUTE\Subjects\2022-2023\Semester 1\Object-oriented Programming\MrVinh\FinalProject\WorkSpace\hospitalManagement\main\hospitalManagement\bin\Debug\hospitalManagement.exe.config
+F:\SayHello\HCMUTE\Subjects\2022-2023\Semester 1\Object-oriented Programming\MrVinh\FinalProject\WorkSpace\hospitalManagement\main\hospitalManagement\bin\Debug\hospitalManagement.exe
+F:\SayHello\HCMUTE\Subjects\2022-2023\Semester 1\Object-oriented Programming\MrVinh\FinalProject\WorkSpace\hospitalManagement\main\hospitalManagement\bin\Debug\hospitalManagement.pdb
+F:\SayHello\HCMUTE\Subjects\2022-2023\Semester 1\Object-oriented Programming\MrVinh\FinalProject\WorkSpace\hospitalManagement\main\hospitalManagement\obj\Debug\hospitalManagement.csproj.AssemblyReference.cache
+F:\SayHello\HCMUTE\Subjects\2022-2023\Semester 1\Object-oriented Programming\MrVinh\FinalProject\WorkSpace\hospitalManagement\main\hospitalManagement\obj\Debug\hospitalManagement.csproj.SuggestedBindingRedirects.cache
+F:\SayHello\HCMUTE\Subjects\2022-2023\Semester 1\Object-oriented Programming\MrVinh\FinalProject\WorkSpace\hospitalManagement\main\hospitalManagement\obj\Debug\hospitalManagement.csproj.CoreCompileInputs.cache
+F:\SayHello\HCMUTE\Subjects\2022-2023\Semester 1\Object-oriented Programming\MrVinh\FinalProject\WorkSpace\hospitalManagement\main\hospitalManagement\obj\Debug\hospitalManagement.exe
+F:\SayHello\HCMUTE\Subjects\2022-2023\Semester 1\Object-oriented Programming\MrVinh\FinalProject\WorkSpace\hospitalManagement\main\hospitalManagement\obj\Debug\hospitalManagement.pdb

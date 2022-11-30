@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,6 +50,7 @@ namespace hospitalManagement
         public int Gentle { get => gentle; set => gentle = value; }
         public string Relative { get => relative; set => relative = value; }
         public string PhoneNumberOfRelative { get => phoneNumberOfRelative; set => phoneNumberOfRelative = value; }
+        public string Id { get => id; set => id = value; }
         internal Fee Fees { get => fees; set => fees = value; }
         internal AdmissionDate AdmissionDates { get => admissionDates; set => admissionDates = value; }
         //
@@ -65,7 +67,7 @@ namespace hospitalManagement
         // Methods	
 
         // in, output
-        public void input(string firstName,
+        public void Input(string firstName,
                      string lastName,
                      string dateOfBirth,
                      string ethnic,
@@ -97,8 +99,10 @@ namespace hospitalManagement
             Fees = fees;
             AdmissionDates = admissionDates;
         }
-        public void input()
+        public void Input()
         {
+            Console.WriteLine("Id: ");
+            Id = Console.ReadLine();
             Console.Write("FirstName: ");
             FirstName = Console.ReadLine();
             Console.Write("LastName: ");
@@ -126,12 +130,13 @@ namespace hospitalManagement
             Console.Write("PhoneNumberOfRelative: ");
             PhoneNumberOfRelative = Console.ReadLine();
             Console.WriteLine("Fees: ");
-            Fees.input();
+            Fees.Input();
             Console.WriteLine("AdmissionDates: ");
-            AdmissionDates.input();
+            AdmissionDates.Input();
         }
-        public void output()
+        public void Output()
         {
+            Console.WriteLine($"Id: {Id}");
             Console.WriteLine($"FirstName: {FirstName} ");
             Console.WriteLine($"LastName: {LastName} ");
             Console.WriteLine($"DateOfBirth: {DateOfBirth} ");

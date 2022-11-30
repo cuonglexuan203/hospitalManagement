@@ -37,8 +37,8 @@ namespace hospitalManagement
         // Destructors
         ~Fee() { }
         // Methods
-        // in, output
-        public void input()
+        // in, Output
+        public void Input()
         {
             System.Console.WriteLine("The drug costs: ");
             DrugCosts = float.Parse(Console.ReadLine());
@@ -47,7 +47,7 @@ namespace hospitalManagement
             System.Console.WriteLine("The advance fee: ");
             AdvanceFee = float.Parse(Console.ReadLine());
         }
-        public void output()
+        public void Output()
         {
             System.Console.WriteLine($"The drug costs: {DrugCosts}");
             System.Console.WriteLine($"The treatmnet costs: {TreatmentCosts}");

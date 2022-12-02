@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal class Patient : IBasicActivities<Patient>
+    internal class Patient
     {
         //Field	
         private string id;
@@ -194,29 +194,6 @@ namespace hospitalManagement
 
 
         // Overriding	
-        public bool Remove(string id)
-        {
-            throw new NotImplementedException();
-        }
 
-        public void ShowInformation()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateInformation()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Add()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Patient Get()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -83,22 +83,8 @@ namespace hospitalManagement
         // General method
         // Other method
         // Overriding
-        public override void ShowInformation()
-        {
-            this.Output();
-        }
-        public override void Add()
-        {
 
-        }
-        public override void UpdateInformation()
-        {
-            this.Input();
-        }
-        public override bool Remove(string id)
-        {
-            return true;
-        }
+
         public override string ToString()
         => base.ToString() + $"\nTransport type: {transportType}" + $"\nNumber of seat: {numberOfSeat}" + ((State == true) ? $"\nDestination: {destination}" : "" + $"\nQuantity: {quantity} cars");
     }

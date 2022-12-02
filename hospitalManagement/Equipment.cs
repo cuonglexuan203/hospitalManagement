@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal class Equipment : IBasicActivities<Equipment>
+    internal class Equipment
     {
         //Field
         private string id;
@@ -82,38 +82,12 @@ namespace hospitalManagement
             Console.WriteLine($"Price: {Price}");
             Console.WriteLine($"State: {State}");
             Console.WriteLine($"Origin: {Origin}");
-
-
         }
 
 
         // General method
         // Other method
-        public virtual void ShowInformation()
-        {
-            this.Output();
-            //if()
-        }
 
-        public virtual void Add()
-        {
-            throw new NotImplementedException();
-        }
-
-        public virtual void UpdateInformation()
-        {
-            throw new NotImplementedException();
-        }
-
-        public virtual bool Remove(string id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public virtual Equipment Get()
-        {
-            throw new NotImplementedException();
-        }
         // Overriding
     }
 }

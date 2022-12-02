@@ -53,6 +53,7 @@
     <Compile Include="IBill.cs" />
     <Compile Include="MedicalEquipment.cs" />
     <Compile Include="Medicine.cs" />
+    <Compile Include="Medicines.cs" />
     <Compile Include="MovementEquipment.cs" />
     <Compile Include="Patient.cs" />
     <Compile Include="Program.cs" />

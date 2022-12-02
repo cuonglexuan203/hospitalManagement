@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal class Doctor : IBasicActivities<Doctor>, IBill
+    internal class Doctor : IBill
     {
         //Field
         private string doctorId;
@@ -171,10 +171,7 @@ namespace hospitalManagement
         // General method
 
         // Other method
-        public void ShowInformation()
-        {
-            this.Output();
-        }
+
 
 
         public void ExportBill()
@@ -185,25 +182,7 @@ namespace hospitalManagement
         public float CalcBill()
         => salaries.Basic + salaries.Bonus + salaries.Allowance;
 
-        public void Add()
-        {
-            throw new NotImplementedException();
-        }
 
-        public void UpdateInformation()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Remove(string id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Doctor Get()
-        {
-            throw new NotImplementedException();
-        }
 
 
 

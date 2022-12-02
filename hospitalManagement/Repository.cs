@@ -32,6 +32,8 @@ namespace hospitalManagement
         // Constructors
         public Repository()
         {
+            medicineList = new Medicines();
+            equipmentList = new Equipments();
         }
 
         public Repository(string id, string name, string description, string room, Medicines medicinesList, Equipments equipmentsList)
@@ -64,13 +66,15 @@ namespace hospitalManagement
         }
         public void Output()
         {
+            Console.WriteLine("The repository");
             Console.WriteLine($"Id: {Id}");
             Console.WriteLine($"Name: {Name}");
             Console.WriteLine($"Description: ");
             Console.WriteLine($"Room: {Room}");
-            Console.WriteLine("The equipment list: ");
+            Console.WriteLine($"The equipment list: {medicineList.Count + equipmentList.Count}");
+            Console.WriteLine($"The medicine list: {medicineList.Count}");
             medicineList.ShowInformation();
-            Console.WriteLine();
+            Console.WriteLine($"The equipment list: {equipmentList.Count}");
             EquipmentsList.ShowInformation();
         }
 

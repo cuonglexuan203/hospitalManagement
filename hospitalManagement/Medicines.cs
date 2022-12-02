@@ -39,23 +39,37 @@ namespace hospitalManagement
         // Other method
         public void AddItem()
         {
+            Console.WriteLine("Add medicine");
+
             Medicine medicine = new Medicine();
             medicine.Input();
             medicineList.Add(medicine);
             this.Count++;
+            Console.WriteLine("Done!");
+
         }
         public void AddItem(Medicine value)
         {
+            Console.WriteLine("Add medicine");
+
             medicineList.Add(value);
             this.Count++;
+            Console.WriteLine("Done!");
+
         }
         public void ShowInformation()
         {
+            Console.WriteLine("Show information of all medicines");
+
             medicineList.ForEach(value => { value.Output(); Console.WriteLine(); });
+            Console.WriteLine("Done!");
+
         }
 
         public Medicine UpdateItem(string id)
         {
+            Console.WriteLine("Update the medicine");
+
             Medicine res = null;
             medicineList.ForEach(value =>
             {
@@ -65,11 +79,23 @@ namespace hospitalManagement
                     res = value;
                 }
             });
+            if (res == null)
+            {
+                Console.WriteLine($"Not found the medicine with id:{id}");
+
+            }
+            else
+            {
+                Console.WriteLine("Done!");
+
+            }
             return res;
         }
 
         public bool RemoveItem(string id)
         {
+            Console.WriteLine("Remove the medicine");
+
             bool res = false;
             medicineList.ForEach(value =>
             {
@@ -80,6 +106,16 @@ namespace hospitalManagement
                     this.Count--;
                 }
             });
+            if (res == false)
+            {
+                Console.WriteLine($"Not found medicine with id: {id}");
+
+            }
+            else
+            {
+                Console.WriteLine("Done!");
+
+            }
             return res;
         }
 
@@ -93,17 +129,31 @@ namespace hospitalManagement
                     res = value;
                 }
             });
+            if (res == null)
+            {
+                Console.WriteLine($"Not found medicine with id: {id}");
+
+            }
+            else
+            {
+                Console.WriteLine("Done!");
+
+            }
             return res;
         }
 
         public bool Clear()
         {
+            Console.WriteLine("Clear all medicines");
+
             medicineList.Clear();
             if (medicineList.Count > 0)
             {
+                Console.WriteLine("Failure");
                 return false;
             }
             this.Count = 0;
+            Console.WriteLine("Done!");
             return true;
         }
 

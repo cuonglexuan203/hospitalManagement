@@ -38,6 +38,8 @@ namespace hospitalManagement
         // Other method
         public void AddItem()
         {
+            Console.WriteLine("New the equipment");
+
             Console.WriteLine("Type of equipment(choose one): 1.Medical 2.Movement\n");
             string choice = Console.ReadLine();
             Equipment equipment = null;
@@ -53,32 +55,47 @@ namespace hospitalManagement
             equipment.Input();
             equipmentList.Add(equipment);
             this.Count++;
+            Console.WriteLine("Done!");
         }
         public void AddItem(MedicalEquipment value)
         {
+            Console.WriteLine("New the equipment");
 
             equipmentList.Add(value);
             this.Count++;
+            Console.WriteLine("Done!");
+
         }
         public void AddItem(MovementEquipment value)
         {
+            Console.WriteLine("New the equipment");
 
             equipmentList.Add(value);
             this.Count++;
+            Console.WriteLine("Done!");
+
         }
         public bool Clear()
         {
+            Console.WriteLine("Clear all equipments");
+
             equipmentList.Clear();
             if (equipmentList.Count > 0)
             {
+                Console.WriteLine("Failure!");
+
                 return false;
             }
             this.Count = 0;
+            Console.WriteLine("Done!");
+
             return true;
         }
 
         public Equipment FindItem(string id)
         {
+            Console.WriteLine("Find the equipment");
+
             Equipment res = null;
             equipmentList.ForEach(value =>
             {
@@ -87,11 +104,23 @@ namespace hospitalManagement
                     res = value;
                 }
             });
+            if (res == null)
+            {
+                Console.WriteLine($"Not found equipment with id:{id}");
+
+            }
+            else
+            {
+                Console.WriteLine("Had found!");
+
+            }
             return res;
         }
 
         public bool RemoveItem(string id)
         {
+            Console.WriteLine("Remove the equipment");
+
             bool res = false;
             equipmentList.ForEach(value =>
             {
@@ -102,20 +131,35 @@ namespace hospitalManagement
                     this.Count--;
                 }
             });
+            if (res == false)
+            {
+                Console.WriteLine($"Not found equipment with id:{id}");
+            }
+            else
+            {
+                Console.WriteLine("Done!");
+
+            }
             return res;
         }
 
         public void ShowInformation()
         {
+            Console.WriteLine($"Show information of all equipments");
+
             equipmentList.ForEach(value =>
             {
                 value.Output();
                 Console.WriteLine();
             });
+            Console.WriteLine("Done!");
+
         }
 
         public Equipment UpdateItem(string id)
         {
+            Console.WriteLine("Update the equipment");
+
             Equipment res = null;
             equipmentList.ForEach(value =>
             {
@@ -125,6 +169,14 @@ namespace hospitalManagement
                     res = value;
                 }
             });
+            if (res == null)
+            {
+                Console.WriteLine($"Not found equipment with id:{id}");
+            }
+            else
+            {
+                Console.WriteLine("Done!");
+            }
             return res;
         }
 

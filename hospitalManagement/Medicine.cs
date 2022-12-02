@@ -35,7 +35,10 @@ namespace hospitalManagement
         public ComeAndLeaveDate ExpiryDate { get => expiryDate; set => expiryDate = value; }
 
         // Constructors
-        public Medicine() { }
+        public Medicine()
+        {
+            expiryDate = new ComeAndLeaveDate();
+        }
         public Medicine(string id, string name, string description, string type, string dosage, string storage, float weight, string serialNumber, ComeAndLeaveDate expiryDate)
         {
             this.id = id;

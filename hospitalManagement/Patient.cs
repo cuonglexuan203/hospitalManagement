@@ -62,7 +62,10 @@ namespace hospitalManagement
 
         //
         // Constructors	
+        public Patient()
+        {
 
+<<<<<<< HEAD
         public Patient(string firstName
         , string lastName
         , string dateOfBirth
@@ -108,6 +111,14 @@ namespace hospitalManagement
 
         // Destructors	
         ~Patient() { }
+=======
+        }
+        // Destructors	
+        ~ Patient()
+        {
+
+        }
+>>>>>>> 7066e33ae2820a3e2137f509070683434afe6b71
         // Methods	
 
         // in, output

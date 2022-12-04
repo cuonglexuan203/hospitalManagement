@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -23,3 +24,6 @@ namespace hospitalManagement
 
     }
 }
+=======
+﻿
+>>>>>>> 7066e33ae2820a3e2137f509070683434afe6b71

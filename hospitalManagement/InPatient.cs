@@ -38,8 +38,7 @@ namespace hospitalManagement
         , string phoneNumberOfRelative
         , Fee fees
         , ComeAndLeaveDate admissionDates
-        , List<Doctor> doctorList
-        , string room):base(firstName, lastName, dateOfBirth, ethnic, religion, nationality, numberOfHealthInsurance, career, address, phonenumber,gentle,relative,phoneNumberOfRelative, fees, admissionDates, doctorList)
+        , string room) : base(firstName, lastName, dateOfBirth, ethnic, religion, nationality, numberOfHealthInsurance, career, address, phonenumber, gentle, relative, phoneNumberOfRelative, fees, admissionDates)
         {
             this.FirstName = firstName;
             this.LastName = lastName;
@@ -56,7 +55,7 @@ namespace hospitalManagement
             this.PhoneNumberOfRelative = phoneNumberOfRelative;
             this.Fees = fees;
             this.AdmissionDates = admissionDates;
-            this.DoctorList = doctorList;
+            this.Room = room;
         }
 
 

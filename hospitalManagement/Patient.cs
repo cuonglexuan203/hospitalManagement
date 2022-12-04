@@ -32,7 +32,6 @@ namespace hospitalManagement
         private Fee fees;
         private ComeAndLeaveDate admissionDates;
 
-        private List<Doctor> doctorList; 
         // Dynamic field	
 
         // Properties	
@@ -54,7 +53,6 @@ namespace hospitalManagement
         public string Id { get => id; set => id = value; }
         internal Fee Fees { get => fees; set => fees = value; }
         internal ComeAndLeaveDate AdmissionDates { get => admissionDates; set => admissionDates = value; }
-        internal List<Doctor> DoctorList { get => doctorList; set => doctorList = value; }
 
 
 
@@ -64,8 +62,10 @@ namespace hospitalManagement
         // Constructors	
         public Patient()
         {
+            Fees = new Fee();
+            AdmissionDates = new ComeAndLeaveDate();
+        }
 
-<<<<<<< HEAD
         public Patient(string firstName
         , string lastName
         , string dateOfBirth
@@ -98,27 +98,32 @@ namespace hospitalManagement
             this.phoneNumberOfRelative = phoneNumberOfRelative;
             this.fees = fees;
             this.admissionDates = admissionDates;
-            this.doctorList = doctorList;
         }
 
-        public Patient()
+        public Patient(string firstName, string lastName, string dateOfBirth, string ethnic, string religion, string nationality, string numberOfHealthInsurance, string career, string address, string phonenumber, int gentle, string relative, string phoneNumberOfRelative, Fee fees, ComeAndLeaveDate admissionDates)
         {
-            Fees = new Fee();
-            AdmissionDates = new ComeAndLeaveDate();
-            DoctorList = new List<Doctor>();
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.dateOfBirth = dateOfBirth;
+            this.ethnic = ethnic;
+            this.religion = religion;
+            this.nationality = nationality;
+            this.numberOfHealthInsurance = numberOfHealthInsurance;
+            this.career = career;
+            this.address = address;
+            this.phonenumber = phonenumber;
+            this.gentle = gentle;
+            this.relative = relative;
+            this.phoneNumberOfRelative = phoneNumberOfRelative;
+            this.fees = fees;
+            this.admissionDates = admissionDates;
         }
+
 
 
         // Destructors	
         ~Patient() { }
-=======
-        }
-        // Destructors	
-        ~ Patient()
-        {
-
-        }
->>>>>>> 7066e33ae2820a3e2137f509070683434afe6b71
+       
         // Methods	
 
         // in, output
@@ -136,8 +141,8 @@ namespace hospitalManagement
                      string relative,
                      string phoneNumberOfRelative,
                      Fee fees,
-                     ComeAndLeaveDate admissionDates,
-                     List<Doctor> doctorList)
+                     ComeAndLeaveDate admissionDates
+                     )
         {
             FirstName = firstName;
             LastName = lastName;
@@ -154,10 +159,7 @@ namespace hospitalManagement
             PhoneNumberOfRelative = phoneNumberOfRelative;
             Fees = fees;
             AdmissionDates = admissionDates;
-            foreach (Doctor i in doctorList)
-            {
-                this.doctorList.Add(i);
-            }
+            
         }
         public virtual void Input()
         {
@@ -193,14 +195,7 @@ namespace hospitalManagement
             Fees.Input();
             Console.WriteLine("AdmissionDates: ");
             AdmissionDates.Input();
-            Console.WriteLine("Number of medical doctors: ");
-            int i = Convert.ToInt32(Console.ReadLine());
-            for (int j = 0; j < i; j++)
-            {
-                Doctor doctor = new Doctor();
-                doctor.Input();
-                doctorList.Add(doctor);
-            }
+            
         }
         public virtual void Output()
         {
@@ -221,7 +216,6 @@ namespace hospitalManagement
             Console.WriteLine($"Fees: {Fees} ");
             Console.WriteLine($"AdmissionDates: {AdmissionDates} ");
             Console.WriteLine("List of medical doctors: ");
-            doctorList.ForEach(value => { value.Output(); Console.WriteLine(); });
 
         }
 
@@ -250,8 +244,7 @@ namespace hospitalManagement
        + $"Relative: {Relative} "
        + $"PhoneNumberOfRelative: {PhoneNumberOfRelative} "
        + $"Fees: {Fees} "
-       + $"AdmissionDates: {AdmissionDates} "
-       + $"List of medical doctor: {doctorList}";
+       + $"AdmissionDates: {AdmissionDates} ";
 
         public void ExportBill()
         {

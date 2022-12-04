@@ -9,26 +9,16 @@ namespace hospitalManagement
     internal class Faculty
     {
         //Field
-<<<<<<< HEAD
         private string id;
         // Infor field
         private string name;
         private string description;
         private string room;
-=======
-        private List<Doctor> doctors;
-        private List<Patient> patients;
-        // Infor field
-        private string nameOfFaculty;
-
-
->>>>>>> 7066e33ae2820a3e2137f509070683434afe6b71
         //  Management field
         private Doctors doctorList;
         private Patients patientList;
         // Dynamic field
         // Properties
-<<<<<<< HEAD
 
         public string Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
@@ -53,27 +43,10 @@ namespace hospitalManagement
             this.room = room;
             this.doctorList = doctorList;
             this.patientList = patientList;
-=======
-        public string NameOfFaculty { get => nameOfFaculty; set => nameOfFaculty = value; }
-        internal List<Doctor> Doctors { get => doctors; set => doctors = value; }
-        internal List<Patient> Patients { get => patients; set => patients = value; }
-        // Constructors
-        public Faculty()
-        {
-
-        }
-
-        public Faculty(List<Doctor> doctors, List<Patient> patients, string nameOfFaculty)
-        {
-            this.doctors = doctors;
-            this.patients = patients;
-            this.nameOfFaculty = nameOfFaculty;
->>>>>>> 7066e33ae2820a3e2137f509070683434afe6b71
         }
 
         // Destructors
         ~Faculty() { }
-<<<<<<< HEAD
 
         // Methods
         // in, output
@@ -98,16 +71,6 @@ namespace hospitalManagement
             patientList.ShowInformation();
             Console.WriteLine($"The doctors list: {doctorList.Count}");
             doctorList.ShowInformation();
-=======
-        // Methods
-        // in, output
-        public void Input ()
-        {
-            Console.Write("Name: ");
-            NameOfFaculty = Console.ReadLine();
-            Console.Write("List of doctors: ");
-
->>>>>>> 7066e33ae2820a3e2137f509070683434afe6b71
         }
         // General method
         // Other method

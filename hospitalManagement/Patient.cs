@@ -272,10 +272,10 @@ namespace hospitalManagement
                 Console.Write($"{table.Rows[i]["Cost"],15}");       
                 Console.WriteLine();
             }
-            float t = CalcBill();
-            Console.WriteLine($"Subtotal: {t}");
-            Console.WriteLine($"Tax: {t * 8 / 100}");
-            Console.WriteLine($"TOTAL: {t + (t * 8 / 100)}");
+            float temp = CalcBill();
+            Console.WriteLine($"Subtotal: {temp}");
+            Console.WriteLine($"Tax: {temp * 8 / 100}");
+            Console.WriteLine($"TOTAL: {temp + (temp * 8 / 100)}");
         }
 
         public float CalcBill()

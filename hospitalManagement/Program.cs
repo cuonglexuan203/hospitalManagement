@@ -12,7 +12,20 @@ namespace hospitalManagement
         static void Main(string[] args)
         {
 
-            Equipment a = new MovementEquipment();
+            
+            //Repositories repositories = new Repositories();
+            //repositories.AddItem();
+            //repositories.ShowInformation();
+
+
+            //Faculties faculties = new Faculties();
+            //faculties.AddItem();
+            //faculties.ShowInformation();
+
+            Patient pa = new Patient();
+            pa.Input();
+
+            pa.ExportBill();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal class Patient : IBasicActivities<Patient>
+    internal class Patient:IBill
     {
         //Field	
         private string id;
@@ -31,7 +32,7 @@ namespace hospitalManagement
         private Fee fees;
         private ComeAndLeaveDate admissionDates;
 
-        //private long 
+        private List<Doctor> doctorList; 
         // Dynamic field	
 
         // Properties	
@@ -53,6 +54,7 @@ namespace hospitalManagement
         public string Id { get => id; set => id = value; }
         internal Fee Fees { get => fees; set => fees = value; }
         internal ComeAndLeaveDate AdmissionDates { get => admissionDates; set => admissionDates = value; }
+        internal List<Doctor> DoctorList { get => doctorList; set => doctorList = value; }
 
 
 
@@ -61,41 +63,51 @@ namespace hospitalManagement
         //
         // Constructors	
 
-        // public Patient(string firstName
-        // , string lastName
-        // , string dateOfBirth
-        // , string ethnic
-        // , string religion
-        // , string nationality
-        // , string numberOfHealthInsurance
-        // , string career
-        // , string address
-        // , string phonenumber
-        // , int gentle
-        // , string relative
-        // , string phoneNumberOfRelative
-        // , Fee fees
-        // , AdmissionDate admissionDates)
-        // {
-        //     this.firstName = firstName;
-        //     this.lastName = lastName;
-        //     this.dateOfBirth = dateOfBirth;
-        //     this.ethnic = ethnic;
-        //     this.religion = religion;
-        //     this.nationality = nationality;
-        //     this.numberOfHealthInsurance = numberOfHealthInsurance;
-        //     this.career = career;
-        //     this.address = address;
-        //     this.phonenumber = phonenumber;
-        //     this.gentle = gentle;
-        //     this.relative = relative;
-        //     this.phoneNumberOfRelative = phoneNumberOfRelative;
-        //     this.fees = fees;
-        //     this.admissionDates = admissionDates;
-        // }
+        public Patient(string firstName
+        , string lastName
+        , string dateOfBirth
+        , string ethnic
+        , string religion
+        , string nationality
+        , string numberOfHealthInsurance
+        , string career
+        , string address
+        , string phonenumber
+        , int gentle
+        , string relative
+        , string phoneNumberOfRelative
+        , Fee fees
+        , ComeAndLeaveDate admissionDates
+        , List<Doctor> doctorList)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.dateOfBirth = dateOfBirth;
+            this.ethnic = ethnic;
+            this.religion = religion;
+            this.nationality = nationality;
+            this.numberOfHealthInsurance = numberOfHealthInsurance;
+            this.career = career;
+            this.address = address;
+            this.phonenumber = phonenumber;
+            this.gentle = gentle;
+            this.relative = relative;
+            this.phoneNumberOfRelative = phoneNumberOfRelative;
+            this.fees = fees;
+            this.admissionDates = admissionDates;
+            this.doctorList = doctorList;
+        }
+
+        public Patient()
+        {
+            Fees = new Fee();
+            AdmissionDates = new ComeAndLeaveDate();
+            DoctorList = new List<Doctor>();
+        }
 
 
         // Destructors	
+        ~Patient() { }
         // Methods	
 
         // in, output
@@ -113,7 +125,8 @@ namespace hospitalManagement
                      string relative,
                      string phoneNumberOfRelative,
                      Fee fees,
-                     ComeAndLeaveDate admissionDates)
+                     ComeAndLeaveDate admissionDates,
+                     List<Doctor> doctorList)
         {
             FirstName = firstName;
             LastName = lastName;
@@ -130,8 +143,12 @@ namespace hospitalManagement
             PhoneNumberOfRelative = phoneNumberOfRelative;
             Fees = fees;
             AdmissionDates = admissionDates;
+            foreach (Doctor i in doctorList)
+            {
+                this.doctorList.Add(i);
+            }
         }
-        public void Input()
+        public virtual void Input()
         {
             Console.WriteLine("Id: ");
             Id = Console.ReadLine();
@@ -165,8 +182,16 @@ namespace hospitalManagement
             Fees.Input();
             Console.WriteLine("AdmissionDates: ");
             AdmissionDates.Input();
+            Console.WriteLine("Number of medical doctors: ");
+            int i = Convert.ToInt32(Console.ReadLine());
+            for (int j = 0; j < i; j++)
+            {
+                Doctor doctor = new Doctor();
+                doctor.Input();
+                doctorList.Add(doctor);
+            }
         }
-        public void Output()
+        public virtual void Output()
         {
             Console.WriteLine($"Id: {Id}");
             Console.WriteLine($"FirstName: {FirstName} ");
@@ -184,6 +209,9 @@ namespace hospitalManagement
             Console.WriteLine($"PhoneNumberOfRelative: {PhoneNumberOfRelative} ");
             Console.WriteLine($"Fees: {Fees} ");
             Console.WriteLine($"AdmissionDates: {AdmissionDates} ");
+            Console.WriteLine("List of medical doctors: ");
+            doctorList.ForEach(value => { value.Output(); Console.WriteLine(); });
+
         }
 
 
@@ -194,29 +222,64 @@ namespace hospitalManagement
 
 
         // Overriding	
-        public bool Remove(string id)
+        public override string ToString()
+       => $"Id: {id}"
+       + $"Id: {Id}"
+       + $"FirstName: {FirstName}"
+       + $"LastName: {LastName} "
+       + $"DateOfBirth: {DateOfBirth} "
+       + $"Ethnic: {Ethnic} "
+       + $"Religion: {Religion} "
+       + $"Nationality: {Nationality} "
+       + $"NumberOfHealthInsurance: {NumberOfHealthInsurance} "
+       + $"Career: {Career} "
+       + $"Address: {Address} "
+       + $"Phonenumber: {Phonenumber} "
+       + $"Gentle: {Gentle} "
+       + $"Relative: {Relative} "
+       + $"PhoneNumberOfRelative: {PhoneNumberOfRelative} "
+       + $"Fees: {Fees} "
+       + $"AdmissionDates: {AdmissionDates} "
+       + $"List of medical doctor: {doctorList}";
+
+        public void ExportBill()
         {
-            throw new NotImplementedException();
+            DateTime now = DateTime.Now;
+
+            Console.WriteLine("             RECEIPT             ");
+            Console.WriteLine($"Receipt Date: {now}");
+            Console.WriteLine($"ID of patient: {Id}");
+            Console.WriteLine($"Fullname of patient: " + FirstName + " " + LastName);
+            Console.WriteLine($"Number of Health Insurance: {NumberOfHealthInsurance}");
+            DataTable table = new DataTable("Receipt Table");
+            table.Columns.Add("Ordinal number");
+            table.Columns.Add("Description");
+            table.Columns.Add("Cost");
+            table.Rows.Add(1,"Drug", Fees.DrugCosts);
+            table.Rows.Add(2,"Treatment", Fees.TreatmentCosts);
+            table.Rows.Add(3, "Advance fee", Fees.AdvanceFee);
+
+            foreach (DataColumn c in table.Columns)
+            {
+                Console.Write($"{c.ColumnName,15}");
+            }
+            Console.WriteLine();
+
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                Console.Write($"{table.Rows[i]["Ordinal number"],15}");             
+                Console.Write($"{table.Rows[i]["Description"],15}");      
+                Console.Write($"{table.Rows[i]["Cost"],15}");       
+                Console.WriteLine();
+            }
+            float t = CalcBill();
+            Console.WriteLine($"Subtotal: {t}");
+            Console.WriteLine($"Tax: {t * 8 / 100}");
+            Console.WriteLine($"TOTAL: {t + (t * 8 / 100)}");
         }
 
-        public void ShowInformation()
-        {
-            throw new NotImplementedException();
-        }
+        public float CalcBill()
+        => Fees.DrugCosts + Fees.TreatmentCosts + Fees.AdvanceFee;
 
-        public void UpdateInformation()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Add()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Patient Get()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

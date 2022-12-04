@@ -22,7 +22,10 @@ namespace hospitalManagement
         public string HospitalDischargeDate { get => hospitalDischargeDate; set => hospitalDischargeDate = value; }
 
         // Constructors
-        public ComeAndLeaveDate() { }
+        public ComeAndLeaveDate() 
+        {
+            
+        }
         public ComeAndLeaveDate(string hospitalAdmissionDate, string hospitalDischargeDate)
         {
             HospitalAdmissionDate = hospitalAdmissionDate;

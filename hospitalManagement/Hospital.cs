@@ -40,22 +40,31 @@ namespace hospitalManagement
         ~Hospital() { }
         // Methods
         // in, output
-        public void input()
+        public void Input()
         {
             Console.WriteLine("Name: ");
             this.Name = Console.ReadLine();
             Console.WriteLine("Description: ");
             this.Description = Console.ReadLine();
-            Console.WriteLine("Adress: ");
+            Console.WriteLine("Address: ");
             this.Address = Console.ReadLine();
-            //Faculties.input();
-            //Repo.input();
+            Console.WriteLine("Number of faculties: ");
+            int i = Convert.ToInt32(Console.ReadLine());
+            for (int j = 0; j < i; j++)
+            {
+                Faculty faculty = new Faculty();
+                faculty.Input();
+                Faculties.Add(faculty);
+            }
+            Repo.Input();
         }
-        public void output()
+        public void Output()
         {
             Console.WriteLine($"Name: {Name}");
             Console.WriteLine($"Description: {Description}");
             Console.WriteLine($"Address: {Address}");
+            Console.WriteLine($"List of faculties: ");
+            faculties.ForEach(value => { value.Output(); Console.WriteLine(); });
 
         }
         // General method

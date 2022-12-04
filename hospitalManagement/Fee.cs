@@ -24,7 +24,10 @@ namespace hospitalManagement
         public float TreatmentCosts { get => treatmentCosts; set => treatmentCosts = value; }
         public float AdvanceFee { get => advanceFee; set => advanceFee = value; }
         // Constructors
-        public Fee() { }
+        public Fee() 
+        {
+            
+        }
         public Fee(float drugCosts
                     , float treatmentCosts
                     , float advanceFee)
@@ -40,11 +43,11 @@ namespace hospitalManagement
         // in, Output
         public void Input()
         {
-            System.Console.WriteLine("The drug costs: ");
+            Console.WriteLine("The drug costs: ");
             DrugCosts = float.Parse(Console.ReadLine());
-            System.Console.WriteLine("The treatmnet costs: ");
+            Console.WriteLine("The treatmnet costs: ");
             TreatmentCosts = float.Parse(Console.ReadLine());
-            System.Console.WriteLine("The advance fee: ");
+            Console.WriteLine("The advance fee: ");
             AdvanceFee = float.Parse(Console.ReadLine());
         }
         public void Output()

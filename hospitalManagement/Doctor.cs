@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal class Doctor : IBasicActivities<Doctor>, IBill
+    internal class Doctor : IBill
     {
         //Field
         private string doctorId;
@@ -35,13 +35,12 @@ namespace hospitalManagement
 
         private bool state;
 
-        private List<string> patientIdList;
 
         private ComeAndLeaveDate admissionDates;
 
         private Salary salaries;
 
-
+        private List<Patient> patientList;
 
         // Dynamic field
         // Properties
@@ -59,7 +58,7 @@ namespace hospitalManagement
         public bool State { get => state; set => state = value; }
         public ComeAndLeaveDate AdmissionDates { get => admissionDates; set => admissionDates = value; }
         public Salary Salaries { get => salaries; set => salaries = value; }
-        public List<string> PatientIdList { get => patientIdList; set => patientIdList = value; }
+        internal List<Patient> PatientList { get => patientList; set => patientList = value; }
 
         // Constructors
         public Doctor() { }
@@ -78,7 +77,8 @@ namespace hospitalManagement
         , bool state
         , List<string> patientIdList
         , ComeAndLeaveDate admissionDates
-        , Salary salaries)
+        , Salary salaries
+        , List<Patient> patientList)
         {
             this.doctorId = doctorId;
             this.firstName = firstName;
@@ -94,6 +94,7 @@ namespace hospitalManagement
             this.state = state;
             this.admissionDates = admissionDates;
             this.salaries = salaries;
+            this.patientList = patientList;
         }
 
 
@@ -131,18 +132,23 @@ namespace hospitalManagement
             Console.WriteLine("The patient list: ");
             Console.Write("Number of current patient: ");
             int n = Int32.Parse(Console.ReadLine());
-            for (int i = 0; i < n; i++)
-            {
-                Console.Write("Id: ");
-                string temp = Console.ReadLine();
-                PatientIdList.Add(temp);
-
-
-            }
+            
             Console.Write("AdmissionDates: ");
             AdmissionDates.Input();
             Console.Write("Salaries: ");
             Salaries.Input();
+
+            Console.WriteLine("Number of patient in charge: ");
+            int i = Convert.ToInt32(Console.ReadLine());
+
+            for (int j = 0; j < i; j++)
+            {
+                Patient patient = new Patient();
+                patientList.Add(patient);
+            }
+
+           
+            
 
         }
         public void Output()
@@ -160,21 +166,16 @@ namespace hospitalManagement
             Console.WriteLine("DepartmentId: {0}", DepartmentId);
             Console.WriteLine("State: {0}", State);
             Console.WriteLine("The patient list: ");
-            //foreach (string i in PatientIdList)
-            //{
-            //  find
-            //}
             Console.WriteLine("AdmissionDates: {0}", AdmissionDates);
             Console.WriteLine("Salaries: {0}", Salaries);
+            Console.WriteLine("List of patients in charge: ");
+            patientList.ForEach(value => { value.Output(); Console.WriteLine(); });
         }
 
         // General method
 
         // Other method
-        public void ShowInformation()
-        {
-            this.Output();
-        }
+
 
 
         public void ExportBill()
@@ -185,25 +186,7 @@ namespace hospitalManagement
         public float CalcBill()
         => salaries.Basic + salaries.Bonus + salaries.Allowance;
 
-        public void Add()
-        {
-            throw new NotImplementedException();
-        }
 
-        public void UpdateInformation()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Remove(string id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Doctor Get()
-        {
-            throw new NotImplementedException();
-        }
 
 
 

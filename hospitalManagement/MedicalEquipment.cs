@@ -23,7 +23,10 @@ namespace hospitalManagement
         public int Quantity { get => quantity; set => quantity = value; }
         public ComeAndLeaveDate ExpiryDate { get => expiryDate; set => expiryDate = value; }
         // Constructors
-        public MedicalEquipment() { }
+        public MedicalEquipment()
+        {
+            expiryDate = new ComeAndLeaveDate();
+        }
         public MedicalEquipment(string id
             , string name
             , string description
@@ -64,22 +67,8 @@ namespace hospitalManagement
         // General method
         // Other method
         // Overriding
-        public override void ShowInformation()
-        {
-            this.Output();
-        }
-        public override void Add()
-        {
 
-        }
-        public override void UpdateInformation()
-        {
-            this.Input();
-        }
-        public override bool Remove(string id)
-        {
-            return true;
-        }
+
         public override string ToString()
         => base.ToString() + $"\nMedical type: {medicalType}" + $"\nQuantity: {quantity} boxs" + expiryDate;
 

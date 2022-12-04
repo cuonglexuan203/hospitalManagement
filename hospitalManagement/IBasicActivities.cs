@@ -11,12 +11,13 @@ namespace hospitalManagement
     internal interface IBasicActivities<T>
     {
         // 
+        void AddItem();
         void ShowInformation();
+        T UpdateItem(string id);
+        bool RemoveItem(string id);
+        T FindItem(string id);
+        bool Clear();
 
-        void Add();
-        void UpdateInformation();
-        bool Remove(string id);
-        T Get();
 
 
 

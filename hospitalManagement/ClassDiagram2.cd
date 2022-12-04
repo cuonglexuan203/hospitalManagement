@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="hospitalManagement.Salary" Collapsed="true">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAEAAAKAAAAEgAAAAAAAIAAAACEAAA=</HashCode>
+      <FileName>Salary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hospitalManagement.ComeAndLeaveDate" Collapsed="true">
+    <Position X="5.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAEAAAAAAAAAAEAAAIAAAAEAAAAAAAAAAAAAACgAA=</HashCode>
+      <FileName>ComeAndLeaveDate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hospitalManagement.Doctor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAYACBg2AEgIMAIAAIAEAICQAAmAkEALCABAQg=</HashCode>
+      <FileName>Doctor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="hospitalManagement.Equipment" Collapsed="true">
+    <Position X="10.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAADAAAAAQAgAAAEIAAIAAQAEAAFAAAEAQAABAgAAgA=</HashCode>
+      <FileName>Equipment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hospitalManagement.Equipments" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAgAAAAABAAARAEAEAwAgAAAAAAEAAAAAABAAAA=</HashCode>
+      <FileName>Equipments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="hospitalManagement.Faculty" Collapsed="true">
+    <Position X="4.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAIAAIBCIAAQQEAAEAAAAAAEAAAABAgA=</HashCode>
+      <FileName>Faculty.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hospitalManagement.Fee" Collapsed="true">
+    <Position X="5.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAACAEAAAIAAAAkAAAAIAAAAAEAAAABAA=</HashCode>
+      <FileName>Fee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hospitalManagement.Hospital" Collapsed="true">
+    <Position X="6.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAEAAAAgAAAAIAEIAAQBEAIEAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Hospital.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hospitalManagement.MedicalEquipment" Collapsed="true">
+    <Position X="9.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAEAACIAAAAkAAAAASAAAAAgAAAAAA=</HashCode>
+      <FileName>MedicalEquipment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hospitalManagement.Medicine" Collapsed="true">
+    <Position X="7.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAAAAAAEgAAAEIAAIgAQAEKEFAAQgAQACAAAAAgA=</HashCode>
+      <FileName>Medicine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hospitalManagement.Medicines" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAhAAABIAAEAQAgAAAAAAEAAAAAABAAAA=</HashCode>
+      <FileName>Medicines.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="hospitalManagement.MovementEquipment" Collapsed="true">
+    <Position X="11.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQIAAAAAAAAAAEAAAIAAAAEAAAAACEAAAAhAAAECA=</HashCode>
+      <FileName>MovementEquipment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hospitalManagement.Patient" Collapsed="true">
+    <Position X="5.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAoDAUQIAEFAAIEEAACIQEIAEEJUQAACAEAICCACCwg=</HashCode>
+      <FileName>Patient.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="hospitalManagement.Repositories" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAABAAABAAAEAQAgAAAAAAEAAAABABAAAQ=</HashCode>
+      <FileName>Repositories.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="hospitalManagement.Repository" Collapsed="true">
+    <Position X="8.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAgAAAAgAAAAZJAIAAQQEAAEAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Repository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hospitalManagement.Doctors" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAABIAABACAEAQAgAAAAAAEAAAAAABAAAA=</HashCode>
+      <FileName>Doctors.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="hospitalManagement.Faculties" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAQAAAAAAABAAABAAAEAQAgAAAAAAEAAAAAABQAAA=</HashCode>
+      <FileName>Faculties.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="hospitalManagement.Patients" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAABAAABAAAEAQAgAAAAAAEAAEAAABBAAA=</HashCode>
+      <FileName>Patients.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="hospitalManagement.IBasicActivities&lt;T&gt;" Collapsed="true">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAABAAAAAAAEAAAgAAAAAAEAAAAAABAAAA=</HashCode>
+      <FileName>IBasicActivities.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="hospitalManagement.IBill" Collapsed="true">
+    <Position X="2.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>IBill.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

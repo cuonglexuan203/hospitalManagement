@@ -85,6 +85,16 @@ namespace hospitalManagement
             Console.WriteLine($"Room: {Room} ");
         }
 
+        public override void ExportBill()
+        {
+            base.ExportBill();
+        }
+
+        public override float CalcBill()
+        {
+            return base.CalcBill();
+        }
+
         public override string ToString()
         {
             return base.ToString();

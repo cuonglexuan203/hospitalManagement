@@ -81,7 +81,7 @@ namespace hospitalManagement
         , string phoneNumberOfRelative
         , Fee fees
         , ComeAndLeaveDate admissionDates
-        , List<Doctor> doctorList)
+        )
         {
             this.firstName = firstName;
             this.lastName = lastName;
@@ -100,27 +100,7 @@ namespace hospitalManagement
             this.admissionDates = admissionDates;
         }
 
-        public Patient(string firstName, string lastName, string dateOfBirth, string ethnic, string religion, string nationality, string numberOfHealthInsurance, string career, string address, string phonenumber, int gentle, string relative, string phoneNumberOfRelative, Fee fees, ComeAndLeaveDate admissionDates)
-        {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.dateOfBirth = dateOfBirth;
-            this.ethnic = ethnic;
-            this.religion = religion;
-            this.nationality = nationality;
-            this.numberOfHealthInsurance = numberOfHealthInsurance;
-            this.career = career;
-            this.address = address;
-            this.phonenumber = phonenumber;
-            this.gentle = gentle;
-            this.relative = relative;
-            this.phoneNumberOfRelative = phoneNumberOfRelative;
-            this.fees = fees;
-            this.admissionDates = admissionDates;
-        }
-
-
-
+        
         // Destructors	
         ~Patient() { }
        
@@ -246,7 +226,7 @@ namespace hospitalManagement
        + $"Fees: {Fees} "
        + $"AdmissionDates: {AdmissionDates} ";
 
-        public void ExportBill()
+        public virtual void ExportBill()
         {
             DateTime now = DateTime.Now;
 
@@ -282,7 +262,7 @@ namespace hospitalManagement
             Console.WriteLine($"TOTAL: {temp + (temp * 8 / 100)}");
         }
 
-        public float CalcBill()
+        public virtual float CalcBill()
         => Fees.DrugCosts + Fees.TreatmentCosts + Fees.AdvanceFee;
 
     }

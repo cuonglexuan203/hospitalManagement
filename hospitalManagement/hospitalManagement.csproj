@@ -63,6 +63,7 @@
     <Compile Include="OutPatient.cs" />
     <Compile Include="Patient.cs" />
     <Compile Include="Patients.cs" />
+    <Compile Include="Pediatrician.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories.cs" />

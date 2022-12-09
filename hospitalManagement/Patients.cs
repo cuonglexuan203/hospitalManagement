@@ -56,6 +56,15 @@ namespace hospitalManagement
 
         }
 
+        public void AddItem(Patient patient)
+        {
+            Console.WriteLine("Add patient");
+            patientList.Add(patient);
+            this.Count++;
+            Console.WriteLine("Done!");
+
+        }
+
         public void ShowInformation()
         {
             Console.WriteLine("Show information of all patients");

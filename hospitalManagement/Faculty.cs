@@ -50,7 +50,7 @@ namespace hospitalManagement
 
         // Methods
         // in, output
-        public void Input()
+        public virtual void Input()
         {
             Console.Write("ID: ");
             Id = Console.ReadLine();
@@ -60,7 +60,36 @@ namespace hospitalManagement
             Description = Console.ReadLine();
         }
 
-        public void Output()
+        public virtual void Input1()
+        {
+            Console.Write("ID: ");
+            Id = Console.ReadLine();
+            Console.Write("Name: ");
+            Name = Console.ReadLine();
+            Console.Write("Description: ");
+            Description = Console.ReadLine();
+            Console.WriteLine("List of doctors: ");
+            Console.WriteLine("Number of doctors: ");
+            int i = Convert.ToInt32(Console.ReadLine());
+
+            for (int j = 0; j < i; j++)
+            {
+                Doctor doctor = new Doctor();
+                DoctorList.AddItem(doctor);
+            }
+
+            Console.WriteLine("The patient list: ");
+            Console.WriteLine("Number of patient in charge: ");
+            int k = Convert.ToInt32(Console.ReadLine());
+
+            for (int j = 0; j < k; j++)
+            {
+                Patient patient = new Patient();
+                PatientList.AddItem(patient);
+            }
+        }
+
+        public virtual void Output()
         {
             Console.WriteLine("The faculty");
             Console.WriteLine($"Id: {Id}");

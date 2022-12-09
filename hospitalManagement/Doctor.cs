@@ -129,15 +129,11 @@ namespace hospitalManagement
             DepartmentId = Console.ReadLine();
             Console.Write("State(1: free, other: 0): ");
             State = Int32.Parse(Console.ReadLine()) == 1 ? true : false;
-            Console.WriteLine("The patient list: ");
-            Console.Write("Number of current patient: ");
-            int n = Int32.Parse(Console.ReadLine());
-            
             Console.Write("AdmissionDates: ");
             AdmissionDates.Input();
             Console.Write("Salaries: ");
             Salaries.Input();
-
+            Console.WriteLine("The patient list: ");
             Console.WriteLine("Number of patient in charge: ");
             int i = Convert.ToInt32(Console.ReadLine());
 

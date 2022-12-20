@@ -91,6 +91,24 @@ namespace hospitalManagement
             this.salaries = salaries;
         }
 
+        protected Employee(string id, string firstName, string lastName, int age, int gentle, string description, string address, string email, string phone, string facultyId, string departmentId, bool state, ComeAndLeaveDate admissionDates, Salary salaries)
+        {
+            this.id = id;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            this.gentle = gentle;
+            this.description = description;
+            this.address = address;
+            this.email = email;
+            this.phone = phone;
+            this.facultyId = facultyId;
+            this.departmentId = departmentId;
+            this.state = state;
+            this.admissionDates = admissionDates;
+            this.salaries = salaries;
+        }
+
 
         // Destructors
         ~Employee() { }

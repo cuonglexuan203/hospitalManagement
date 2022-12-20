@@ -9,16 +9,21 @@ namespace hospitalManagement
     internal class Nurse : Employee
     {
         //Field
+        private List<Patient> patientList;
+
+
         // Infor field
         //  Management field
         // Dynamic field
         // Properties
+        internal List<Patient> PatientList { get => patientList; set => patientList = value; }
+
         // Constructors
         public Nurse()
         {
 
         }
-        public Nurse(string doctorId
+        public Nurse(string id
         , string firstName
         , string lastName
         , int age
@@ -30,39 +35,25 @@ namespace hospitalManagement
         , string facultyId
         , string departmentId
         , bool state
-        , List<string> patientIdList
         , ComeAndLeaveDate admissionDates
         , Salary salaries
-        , List<Patient> patientList) : base(doctorId,
-                                            firstName,
-                                            lastName,
-                                            age,
-                                            gentle,
-                                            description,
-                                            address,
-                                            email,
-                                            phone,
-                                            facultyId,
-                                            departmentId,
-                                            state,
-                                            admissionDates,
-                                            salaries,
-                                            patientList)
+        , List<Patient> patientList) : base(id
+            , firstName
+            , lastName
+            , age
+            , gentle
+            , description
+            , address
+            , email
+            , phone
+            , facultyId
+            , departmentId
+            , state
+            , admissionDates
+            , salaries)
         {
-            this.Id = doctorId;
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            this.Age = age;
-            this.Gentle = gentle;
-            this.Description = description;
-            this.Address = address;
-            this.Email = email;
-            this.Phone = phone;
-            this.FacultyId = facultyId;
-            this.DepartmentId = departmentId;
-            this.State = state;
-            this.AdmissionDates = admissionDates;
-            this.Salaries = salaries;
+
+            this.PatientList = patientList;
         }
 
         // Destructors

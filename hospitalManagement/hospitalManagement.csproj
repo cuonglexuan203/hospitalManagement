@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Employee.cs" />
     <Compile Include="InPatient.cs" />
     <Compile Include="ComeAndLeaveDate.cs" />
     <Compile Include="Doctors.cs" />
@@ -61,11 +62,12 @@
     <Compile Include="Medicines.cs" />
     <Compile Include="MovementEquipment.cs" />
     <Compile Include="Neurology.cs" />
+    <Compile Include="Nurse.cs" />
+    <Compile Include="Nurses.cs" />
     <Compile Include="Obstetrics.cs" />
     <Compile Include="OutPatient.cs" />
     <Compile Include="Patient.cs" />
     <Compile Include="Patients.cs" />
-    <Compile Include="Pediatrician.cs" />
     <Compile Include="Pediatrics.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

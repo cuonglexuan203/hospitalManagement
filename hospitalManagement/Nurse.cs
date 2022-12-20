@@ -6,21 +6,19 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal class Doctor : Employee
+    internal class Nurse : Employee
     {
-        
-
-        private List<Patient> patientList;
-
+        //Field
+        // Infor field
+        //  Management field
         // Dynamic field
         // Properties
-        
-        internal List<Patient> PatientList { get => patientList; set => patientList = value; }
-
         // Constructors
-        public Doctor() { }
+        public Nurse()
+        {
 
-        public Doctor(string doctorId
+        }
+        public Nurse(string doctorId
         , string firstName
         , string lastName
         , int age
@@ -65,40 +63,24 @@ namespace hospitalManagement
             this.State = state;
             this.AdmissionDates = admissionDates;
             this.Salaries = salaries;
-            this.PatientList = patientList;
         }
 
         // Destructors
-        ~Doctor () { }
+        ~Nurse() { }
         // Methods
-        // in, Output
+        // in, output
         public override void Input()
         {
             base.Input();
-            Console.WriteLine("The patient list: ");
-            Console.WriteLine("Number of patient in charge: ");
-            int i = Convert.ToInt32(Console.ReadLine());
-
-            for (int j = 0; j < i; j++)
-            {
-                Patient patient = new Patient();
-                patientList.Add(patient);
-            }
         }
 
         public override void Output()
         {
             base.Output();
-            Console.WriteLine("List of patients in charge: ");
-            patientList.ForEach(value => { value.Output(); Console.WriteLine(); });
         }
         // General method
-
         // Other method
-
-
         // Overriding
-       
         public override void ExportBill()
         {
             base.ExportBill();
@@ -108,7 +90,5 @@ namespace hospitalManagement
         {
             return base.CalcBill();
         }
-
-
     }
 }

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal class Doctors: IBasicActivities<Doctor>
+    class Nurses:IBasicActivities<Nurse>
     {
         //field
-        private List<Doctor> doctorList;
+        private List<Nurse> nurseList;
         private long count;
 
 
@@ -17,40 +17,42 @@ namespace hospitalManagement
         //  Management field
         // Dynamic 
         // Properties
-        public long Count { get => count; set => count = value; }
-        internal List<Doctor> DoctorList { get => doctorList; set => doctorList = value; }
 
+        public long Count { get => count; set => count = value; }
+        internal List<Nurse> NurseList { get => nurseList; set => nurseList = value; }
 
         // Constructors
 
-        public Doctors()
+        public Nurses()
         {
-            doctorList = new List<Doctor>();
+            nurseList = new List<Nurse>();
             count = 0;
         }
-        public Doctors(List<Doctor> doctorList, long count)
+        public Nurses(List<Nurse> nurseList, long count)
         {
-            this.doctorList = doctorList;
+            this.nurseList = nurseList;
             this.count = count;
         }
 
+        
+
         public void AddItem()
         {
-            Console.WriteLine("Add doctor");
+            Console.WriteLine("Add nurse");
 
-            Doctor doctor = new Doctor();
-            doctor.Input();
-            doctorList.Add(doctor);
+            Nurse nurse = new Nurse();
+            nurse.Input();
+            nurseList.Add(nurse);
             this.Count++;
             Console.WriteLine("Done!");
 
         }
 
-        public void AddItem(Doctor value)
+        public void AddItem(Nurse value)
         {
-            Console.WriteLine("Add doctor");
+            Console.WriteLine("Add nurse");
 
-            doctorList.Add(value);
+            nurseList.Add(value);
             this.Count++;
             Console.WriteLine("Done!");
 
@@ -58,10 +60,10 @@ namespace hospitalManagement
 
         public bool Clear()
         {
-            Console.WriteLine("Clear all doctors");
+            Console.WriteLine("Clear all nurses");
 
-            doctorList.Clear();
-            if (doctorList.Count > 0)
+            nurseList.Clear();
+            if (nurseList.Count > 0)
             {
                 Console.WriteLine("Failure");
                 return false;
@@ -71,10 +73,10 @@ namespace hospitalManagement
             return true;
         }
 
-        public Doctor FindItem(string id)
+        public Nurse FindItem(string id)
         {
-            Doctor res = null;
-            doctorList.ForEach(value =>
+            Nurse res = null;
+            nurseList.ForEach(value =>
             {
                 if (value.Id == id)
                 {
@@ -83,7 +85,7 @@ namespace hospitalManagement
             });
             if (res == null)
             {
-                Console.WriteLine($"Not found doctor with id: {id}");
+                Console.WriteLine($"Not found nurse with id: {id}");
 
             }
             else
@@ -96,21 +98,21 @@ namespace hospitalManagement
 
         public bool RemoveItem(string id)
         {
-            Console.WriteLine("Remove the Doctor");
+            Console.WriteLine("Remove the nurse");
 
             bool res = false;
-            doctorList.ForEach(value =>
+            nurseList.ForEach(value =>
             {
                 if (value.Id == id)
                 {
-                    doctorList.Remove(value);
+                    nurseList.Remove(value);
                     res = true;
                     this.Count--;
                 }
             });
             if (res == false)
             {
-                Console.WriteLine($"Not found doctor with id: {id}");
+                Console.WriteLine($"Not found nurse with id: {id}");
 
             }
             else
@@ -123,18 +125,18 @@ namespace hospitalManagement
 
         public void ShowInformation()
         {
-            Console.WriteLine("Show information of all doctors");
+            Console.WriteLine("Show information of all nurses");
 
-            doctorList.ForEach(value => { value.Output(); Console.WriteLine(); });
+            nurseList.ForEach(value => { value.Output(); Console.WriteLine(); });
             Console.WriteLine("Done!");
         }
 
-        public Doctor UpdateItem(string id)
+        public Nurse UpdateItem(string id)
         {
-            Console.WriteLine("Update the doctor");
+            Console.WriteLine("Update the nurse");
 
-            Doctor res = null;
-            doctorList.ForEach(value =>
+            Nurse res = null;
+            nurseList.ForEach(value =>
             {
                 if (value.Id == id)
                 {
@@ -144,7 +146,7 @@ namespace hospitalManagement
             });
             if (res == null)
             {
-                Console.WriteLine($"Not found the doctor with id:{id}");
+                Console.WriteLine($"Not found the nurse with id:{id}");
 
             }
             else

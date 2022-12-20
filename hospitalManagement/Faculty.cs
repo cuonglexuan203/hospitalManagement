@@ -16,6 +16,7 @@ namespace hospitalManagement
         private string room;
         //  Management field
         private Doctors doctorList;
+        private 
         private Patients patientList;
         // Dynamic field
         // Properties

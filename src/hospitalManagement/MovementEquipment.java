@@ -1,5 +1,7 @@
 package hospitalManagement;
 
+import java.util.Scanner;
+
 public abstract class MovementEquipment extends Equipment {
 	 //Field
     private int numberOfSeat;
@@ -9,55 +11,66 @@ public abstract class MovementEquipment extends Equipment {
     //  Management field
     // Dynamic field
     // Properties
-    public int NumberOfSeat { get => numberOfSeat; set => numberOfSeat = value; }
-    public String Destination { get => destination; set => destination = value; }
+   
 
-    // Constructors
+    public int getNumberOfSeat() {
+		return numberOfSeat;
+	}
+	public void setNumberOfSeat(int numberOfSeat) {
+		this.numberOfSeat = numberOfSeat;
+	}
+	public String getDestination() {
+		return destination;
+	}
+	public void setDestination(String destination) {
+		this.destination = destination;
+	}
+	// Constructors
     public MovementEquipment() { }
     public MovementEquipment(
         String id
         , String name
         , String description
         , float price
-        , bool state
+        , boolean state
         , String origin
         , int quantity
         , int numberOfSeat
         , String destination
-        ) : base(id, name, description, price, state, origin, quantity)
+        )
     {
+    	super(id, name, description, price, state, origin, quantity);
         this.numberOfSeat = numberOfSeat;
         this.destination = destination;
-        this.Quantity = quantity;
     }
     // Destructors
-    ~MovementEquipment() { }
+
     // Methods
     // in, output
-    public override void Input()
+    public  void Input()
     {
-        base.Input();
-
-        Console.Write("Number of seat:");
-        numberOfSeat = Int32.Parse(Console.ReadLine());
-        if (State == false)
+        super.Input();
+        Scanner ip = new Scanner(System.in);
+        System.out.print("Number of seat:");
+        numberOfSeat = ip.nextInt();
+        if ( super.getState() == false)
         {
-            Console.Write("Destination: ");
-            destination = Console.ReadLine();
+            System.out.print("Destination: ");
+            destination = ip.nextLine();
         }
         else
         {
             destination = "";
         }
-
+        ip.close();
     }
-    public override void Output()
+    public  void Output()
     {
-        base.Output();
-        Console.WriteLine($"Number of seat: {numberOfSeat}");
-        if (State == true)
+        super.Output();
+        System.out.format("Number of seat: %d\n", numberOfSeat);
+        if (super.getState() == false)
         {
-            Console.WriteLine($"Destination: {destination}");
+            System.out.format("Destination: %s\n",destination);
 
         }
     }
@@ -66,9 +79,10 @@ public abstract class MovementEquipment extends Equipment {
     // Overriding
 
 
-    public override String ToString()
-    => base.ToString()
-        + $"\nNumber of seat: {numberOfSeat}"
-        + ((State == true) ? $"\nDestination: {destination}" : "");
-
+    public  String ToString()
+    {
+    	return  super.toString()
+        + "\nNumber of seat: " + numberOfSeat
+        + ((super.getState() == false) ? "\nDestination: " + destination : "");
+    }
 }

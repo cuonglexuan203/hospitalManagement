@@ -44,7 +44,7 @@ public class Equipment {
 	public void setPrice(float price) {
 		this.price = price;
 	}
-	public boolean isState() {
+	public boolean getState() {
 		return state;
 	}
 	public void setState(boolean state) {

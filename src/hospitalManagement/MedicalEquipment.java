@@ -62,7 +62,7 @@ public class MedicalEquipment extends Equipment {
     }
     public  void Output()
     {
-        System.out.format("The information of $s\n", this.getClass().getName());
+        System.out.format("The information of $s\n", this.getClass().getSimpleName());
         super.Output();
         System.out.format("Medical type: %s\n",medicalType);
         expiryDate.Output();

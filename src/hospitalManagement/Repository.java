@@ -110,10 +110,10 @@ public class Repository {
     System.out.format("Name: %s",name);
     System.out.format("Description: %s", description);
     System.out.format("Room: %s",room);
-    System.out.format("The equipment list: %d",medicineList.Count + equipmentList.Count);
-    System.out.format("The medicine list: %d",medicineList.Count);
+    System.out.format("The equipment list: %d",medicineList.getCount() + equipmentList.getCount());
+    System.out.format("The medicine list: %d",medicineList.getCount());
     medicineList.ShowInformation();
-    System.out.format("The equipment list: %d",equipmentList.Count);
+    System.out.format("The equipment list: %d",equipmentList.getCount());
     equipmentList.ShowInformation();
   }
   // General method
@@ -124,7 +124,7 @@ public class Repository {
 			  "\nName: " + name +
 			  "\nDescription: " + description +
 	          "\nRoom: " + room +
-	          "\nMedicines count:  " + medicinesList.Count +
-	          "\nEquipment count: " + equipmentsList.Count;
+	          "\nMedicines count:  " + medicineList.getCount() +
+	          "\nEquipment count: " + equipmentList.getCount();
   }
 }

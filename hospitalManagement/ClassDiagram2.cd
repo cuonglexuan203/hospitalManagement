@@ -86,33 +86,18 @@
       <FileName>NonEmergencyTransportation.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="hospitalManagement.Repositories" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="9.5" Y="5.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAQAAAAAAABAAABAAAEAQAgAAAAAAEAAAABABAAAQ=</HashCode>
-      <FileName>Repositories.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="hospitalManagement.Repository" Collapsed="true">
-    <Position X="9.5" Y="6" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAAgAAAAgAAAEZJAIAAQQEAAEAAAAAAAAAAAAAgA=</HashCode>
-      <FileName>Repository.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="hospitalManagement.Stretcher" Collapsed="true">
+  <Class Name="hospitalManagement.Neurology" Collapsed="true">
     <Position X="9.25" Y="11.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAIAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Stretcher.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Neurology.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="hospitalManagement.WheelChair" Collapsed="true">
+  <Class Name="hospitalManagement.Obstetrics" Collapsed="true">
     <Position X="11.5" Y="11.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAIAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>WheelChair.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Obstetrics.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="hospitalManagement.ComeAndLeaveDate" Collapsed="true">
@@ -121,6 +106,21 @@
       <HashCode>EAAAEAAAAAAAAAAEAAAIAAAAEAAAAAAAAAAAAAACgAA=</HashCode>
       <FileName>ComeAndLeaveDate.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="hospitalManagement.Repository" Collapsed="true">
+    <Position X="9.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAgAAAAgAAAEZJAIAAQQEAAEAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Repository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hospitalManagement.Repositories" Collapsed="true">
+    <Position X="9.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAABAAABAAAEAQAgAAAAAAEAAAABABAAAQ=</HashCode>
+      <FileName>Repositories.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Interface Name="hospitalManagement.IBasicActivities&lt;T&gt;" Collapsed="true">
     <Position X="14.5" Y="3.75" Width="1.5" />

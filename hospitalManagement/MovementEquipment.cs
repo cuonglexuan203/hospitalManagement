@@ -37,7 +37,7 @@ namespace hospitalManagement
         {
             this.numberOfSeat = numberOfSeat;
             this.destination = destination;
-            this.Quantity = quantity;
+
         }
         // Destructors
         ~MovementEquipment() { }

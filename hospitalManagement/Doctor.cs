@@ -20,7 +20,7 @@ namespace hospitalManagement
         // Constructors
         public Doctor() { }
 
-        public Doctor(string doctorId
+        public Doctor(string id
         , string firstName
         , string lastName
         , int age
@@ -35,7 +35,7 @@ namespace hospitalManagement
         , List<string> patientIdList
         , ComeAndLeaveDate admissionDates
         , Salary salaries
-        , List<Patient> patientList) : base(doctorId,
+        , List<Patient> patientList) : base(id,
                                             firstName,
                                             lastName,
                                             age,
@@ -51,7 +51,7 @@ namespace hospitalManagement
                                             salaries,
                                             patientList)
         {
-            this.Id = doctorId;
+            this.Id = id;
             this.FirstName = firstName;
             this.LastName = lastName;
             this.Age = age;

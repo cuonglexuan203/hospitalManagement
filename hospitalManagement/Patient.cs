@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal class Patient:IBill
+    internal class Patient : IBill
     {
         //Field	
         private string id;
@@ -100,10 +100,10 @@ namespace hospitalManagement
             this.admissionDates = admissionDates;
         }
 
-        
+
         // Destructors	
         ~Patient() { }
-       
+
         // Methods	
 
         // in, output
@@ -139,7 +139,7 @@ namespace hospitalManagement
             PhoneNumberOfRelative = phoneNumberOfRelative;
             Fees = fees;
             AdmissionDates = admissionDates;
-            
+
         }
         public virtual void Input()
         {
@@ -175,7 +175,7 @@ namespace hospitalManagement
             Fees.Input();
             Console.WriteLine("AdmissionDates: ");
             AdmissionDates.Input();
-            
+
         }
         public virtual void Output()
         {
@@ -209,7 +209,6 @@ namespace hospitalManagement
         // Overriding	
         public override string ToString()
        => $"Id: {id}"
-       + $"Id: {Id}"
        + $"FirstName: {FirstName}"
        + $"LastName: {LastName} "
        + $"DateOfBirth: {DateOfBirth} "
@@ -226,7 +225,7 @@ namespace hospitalManagement
        + $"Fees: {Fees} "
        + $"AdmissionDates: {AdmissionDates} ";
 
-        public virtual void ExportBill()
+        public void ExportBill()
         {
             DateTime now = DateTime.Now;
 
@@ -239,8 +238,8 @@ namespace hospitalManagement
             table.Columns.Add("Ordinal number");
             table.Columns.Add("Description");
             table.Columns.Add("Cost");
-            table.Rows.Add(1,"Drug", Fees.DrugCosts);
-            table.Rows.Add(2,"Treatment", Fees.TreatmentCosts);
+            table.Rows.Add(1, "Drug", Fees.DrugCosts);
+            table.Rows.Add(2, "Treatment", Fees.TreatmentCosts);
             table.Rows.Add(3, "Advance fee", Fees.AdvanceFee);
 
             foreach (DataColumn c in table.Columns)
@@ -251,9 +250,9 @@ namespace hospitalManagement
 
             for (int i = 0; i < table.Rows.Count; i++)
             {
-                Console.Write($"{table.Rows[i]["Ordinal number"],15}");             
-                Console.Write($"{table.Rows[i]["Description"],15}");      
-                Console.Write($"{table.Rows[i]["Cost"],15}");       
+                Console.Write($"{table.Rows[i]["Ordinal number"],15}");
+                Console.Write($"{table.Rows[i]["Description"],15}");
+                Console.Write($"{table.Rows[i]["Cost"],15}");
                 Console.WriteLine();
             }
             float temp = CalcBill();
@@ -262,7 +261,7 @@ namespace hospitalManagement
             Console.WriteLine($"TOTAL: {temp + (temp * 8 / 100)}");
         }
 
-        public virtual float CalcBill()
+        public float CalcBill()
         => Fees.DrugCosts + Fees.TreatmentCosts + Fees.AdvanceFee;
 
     }

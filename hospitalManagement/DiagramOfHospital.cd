@@ -29,14 +29,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="hospitalManagement.Doctor" Collapsed="true">
-    <Position X="36.25" Y="3" Width="1.5" />
+    <Position X="9" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAIAAIAEAAAAAAAAAEAACABAAA=</HashCode>
       <FileName>Doctor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="hospitalManagement.Doctors" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="24" Y="0.5" Width="1.5" />
+    <Position X="9" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAAAAABIAABACAEAQAgAAAAAAEAAAAAABAAAA=</HashCode>
       <FileName>Doctors.cs</FileName>
@@ -44,7 +44,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="hospitalManagement.Employee" Collapsed="true">
-    <Position X="37.5" Y="1.75" Width="1.5" />
+    <Position X="10.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAEAYACBg2AEgIMAIAAIAEAIAQAAmAEAALCAAAwg=</HashCode>
       <FileName>Employee.cs</FileName>
@@ -67,7 +67,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="hospitalManagement.Faculties" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="27.5" Y="0.5" Width="1.5" />
+    <Position X="7.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAQAAAAAAABAAABAAAEAQAgAAAAAAEAAAAAABQAAA=</HashCode>
       <FileName>Faculties.cs</FileName>
@@ -75,14 +75,14 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="hospitalManagement.Faculty" Collapsed="true">
-    <Position X="31.5" Y="0.75" Width="1.5" />
+    <Position X="7.25" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAIAAIBCIAAQQEAAEAAAAAAEAAAABAgA=</HashCode>
       <FileName>Faculty.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="hospitalManagement.Fee" Collapsed="true">
-    <Position X="22.25" Y="1.5" Width="1.5" />
+    <Position X="22.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAIAAAACAEAAAIAAAAkAAAAIAAAAAEAAAABAA=</HashCode>
       <FileName>Fee.cs</FileName>
@@ -103,7 +103,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="hospitalManagement.InPatient" Collapsed="true">
-    <Position X="44.25" Y="2.75" Width="1.5" />
+    <Position X="5.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEABAIAAIQEAAAAAAAAAAAACAAAAA=</HashCode>
       <FileName>InPatient.cs</FileName>
@@ -139,7 +139,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="hospitalManagement.Neurology" Collapsed="true">
-    <Position X="31.5" Y="2" Width="1.5" />
+    <Position X="7.25" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Neurology.cs</FileName>
@@ -153,14 +153,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="hospitalManagement.Nurse" Collapsed="true">
-    <Position X="38.5" Y="3" Width="1.5" />
+    <Position X="11.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAIAAIAEAAAAAAAAAAAACAAAAA=</HashCode>
       <FileName>Nurse.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="hospitalManagement.Nurses" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="24" Y="1.5" Width="1.5" />
+    <Position X="11.25" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAQACAAAAAhAAABAAAEAQAgAAAAAAEAAAAAABAAAA=</HashCode>
       <FileName>Nurses.cs</FileName>
@@ -168,21 +168,21 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="hospitalManagement.Obstetrics" Collapsed="true">
-    <Position X="29.25" Y="2" Width="1.5" />
+    <Position X="5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Obstetrics.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="hospitalManagement.OutPatient" Collapsed="true">
-    <Position X="42" Y="2.75" Width="1.5" />
+    <Position X="3.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAAAAAAAAAAAAAAEAAAIAAIAEAgAAAAIAAAAAKAAAAA=</HashCode>
       <FileName>OutPatient.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="hospitalManagement.Patient" Collapsed="true">
-    <Position X="43.25" Y="1.5" Width="1.5" />
+    <Position X="4.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>FAoDAUQIAEFAAAEEAAAIQEIAEEJUQAACAEAICCACCwg=</HashCode>
       <FileName>Patient.cs</FileName>
@@ -190,7 +190,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="hospitalManagement.Patients" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="25.75" Y="1.5" Width="1.5" />
+    <Position X="4.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAAAAABAAABAAAEAQAgAAAAAAEAAEAAABBAAA=</HashCode>
       <FileName>Patients.cs</FileName>
@@ -198,7 +198,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="hospitalManagement.Pediatrics" Collapsed="true">
-    <Position X="33.75" Y="2" Width="1.5" />
+    <Position X="9.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Pediatrics.cs</FileName>
@@ -220,7 +220,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="hospitalManagement.Salary" Collapsed="true">
-    <Position X="27.5" Y="1.5" Width="1.5" />
+    <Position X="24" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAEAAAKAAAAEgAAAAAAAIAAAACEAAA=</HashCode>
       <FileName>Salary.cs</FileName>

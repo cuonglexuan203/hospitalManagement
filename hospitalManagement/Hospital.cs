@@ -10,14 +10,13 @@ namespace hospitalManagement
     internal class Hospital
     {
         //Field
-        private List<Faculty> faculties;
-        private Repository repo;
+        private Faculties faculties;
+        private Repositories repo;
 
         // Infor field
         private string name;
         private string description;
         private string address;
-
 
         //  Management field
         // Dynamic field
@@ -25,13 +24,15 @@ namespace hospitalManagement
         public string Name { get => name; set => name = value; }
         public string Description { get => description; set => description = value; }
         public string Address { get => address; set => address = value; }
-        public List<Faculty> Faculties { get => faculties; set => faculties = value; }
-        public Repository Repo { get => repo; set => repo = value; }
+        public Faculties Faculties { get => faculties; set => faculties = value; }
+        public Repositories Repo { get => repo; set => repo = value; }
         // Constructors
-        public Hospital() { 
-            faculties = new List<Faculty>();
+        public Hospital()
+        {
+            faculties = new Faculties();
+            repo = new Repositories();
         }
-        public Hospital(List<Faculty> faculties, Repository repo)
+        public Hospital(Faculties faculties, Repositories repo)
         {
             this.Faculties = faculties;
             this.Repo = repo;
@@ -42,29 +43,22 @@ namespace hospitalManagement
         // in, output
         public void Input()
         {
-            Console.WriteLine("Name: ");
+            Console.WriteLine("Some basic information of hospital:");
+            Console.Write("Name: ");
             this.Name = Console.ReadLine();
-            Console.WriteLine("Description: ");
+            Console.Write("Description: ");
             this.Description = Console.ReadLine();
-            Console.WriteLine("Address: ");
+            Console.Write("Address: ");
             this.Address = Console.ReadLine();
-            Console.WriteLine("Number of faculties: ");
-            int i = Convert.ToInt32(Console.ReadLine());
-            for (int j = 0; j < i; j++)
-            {
-                Faculty faculty = new Faculty();
-                faculty.Input();
-                Faculties.Add(faculty);
-            }
-            Repo.Input();
         }
         public void Output()
         {
+            Console.WriteLine("The information of hospital: ");
             Console.WriteLine($"Name: {Name}");
             Console.WriteLine($"Description: {Description}");
             Console.WriteLine($"Address: {Address}");
-            Console.WriteLine($"List of faculties: ");
-            faculties.ForEach(value => { value.Output(); Console.WriteLine(); });
+            Console.WriteLine($"Number of faculty: {faculties.Count}");
+            Console.WriteLine($"Number of repository: {repo.Count}");
 
         }
         // General method

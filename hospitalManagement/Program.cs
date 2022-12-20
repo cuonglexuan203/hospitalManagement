@@ -10,6 +10,9 @@ namespace hospitalManagement
     {
         static void Main(string[] args)
         {
+            Hospital ad = new Hospital();
+            ad.Input();
+            ad.Output();
         }
     }
 }

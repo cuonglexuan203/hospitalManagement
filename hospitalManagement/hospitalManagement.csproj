@@ -75,6 +75,11 @@
     <Compile Include="Pediatrics.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories.cs" />
+    <Compile Include="Repository.cs" />
+    <Compile Include="Salary.cs" />
+    <Compile Include="Stretcher.cs" />
+    <Compile Include="WheelChair.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

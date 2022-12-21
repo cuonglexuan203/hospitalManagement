@@ -129,5 +129,15 @@ namespace hospitalManagement
         {
             return this.EquipmentsList.UpdateItem(id);
         }
+
+        public void ClearMedicine()
+        {
+            this.MedicinesList.Clear();
+        }
+
+        public void ClearEquipment()
+        {
+            this.EquipmentsList.Clear();
+        }
     }
 }

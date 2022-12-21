@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
@@ -26,6 +27,126 @@ namespace hospitalManagement
         {
             Console.Clear();
         }
+        public static void ShowFunctionality(string[] features)
+        {
+            ClearScreen();
+            ShowFrame();
+            ShowItemsInFrame(features);
+        }
+        public static void ImplementFeatures(Hospital ad, string[] features, int type)
+        {
+            string idRepo = "";
+            Console.Write("Input id of the repository want to add item: ");
+            idRepo = Console.ReadLine();
+            Repository root = ad.Repo.FindItem(idRepo);
+            if (root == null)
+            {
+                Console.ReadKey();
+                return;
+            }
+            while (true)
+            {
+                ShowFunctionality(features);
+                int choice = -1;
+                int isQuit = 0;
+                choice = Int32.Parse(Console.ReadLine());
+                string idFind = "";
+                switch (choice)
+                {
+                    case 1:
+
+                        if (type == 1) // equipment
+                        {
+                            root.AddEquipment();
+                        }
+                        else if (type == 2) // medicine
+                        {
+                            root.AddMedicine();
+                        }
+                        Console.ReadKey();
+                        break;
+                    case 2:
+                        if (type == 1)
+                        {
+                            root.EquipmentsList.ShowInformation();
+                        }
+                        else if (type == 2)
+                        {
+                            root.MedicinesList.ShowInformation();
+                        }
+                        Console.ReadKey();
+
+                        break;
+                    case 3:
+                        Console.WriteLine("Input id want to find: ");
+                        idFind = Console.ReadLine();
+
+                        if (type == 1)
+                        {
+                            root.FindEquipment(idFind)?.Output();
+                        }
+                        else if (type == 2)
+                        {
+                            root.FindMedicine(idFind)?.Output();
+                        }
+                        Console.ReadKey();
+
+                        break;
+                    case 4:
+                        Console.WriteLine("Input id want to update: ");
+                        idFind = Console.ReadLine();
+
+                        if (type == 1)
+                        {
+                            root.UpdateEquipment(idFind);
+                        }
+                        else if (type == 2)
+                        {
+                            root.UpdateMedicine(idFind);
+                        }
+                        Console.ReadKey();
+
+                        break;
+                    case 5:
+                        Console.WriteLine("Input id want to remove: ");
+                        idFind = Console.ReadLine();
+
+                        if (type == 1)
+                        {
+                            root.RemoveEquipment(idFind);
+                        }
+                        else if (type == 2)
+                        {
+                            root.RemoveMedicine(idFind);
+                        }
+                        Console.ReadKey();
+
+                        break;
+                    case 6:
+
+
+                        if (type == 1)
+                        {
+                            root.ClearEquipment();
+                        }
+                        else if (type == 2)
+                        {
+                            root.ClearMedicine();
+                        }
+                        Console.ReadKey();
+
+                        break;
+                    case 7:
+                        isQuit = 1;
+                        break;
+                }
+                if (isQuit == 1)
+                {
+                    break;
+                }
+            }
+
+        }
         //
         static void Main(string[] args)
         {
@@ -40,7 +161,7 @@ namespace hospitalManagement
                 Console.WriteLine($"| 3.{"Quit",-60}|");
 
                 choice = Int32.Parse(Console.ReadLine());
-                //
+                // faculty branch
                 if (choice == 1)
                 {
                     string[] mainFunctionality = {
@@ -68,67 +189,86 @@ namespace hospitalManagement
                                                         "Clear all of employees"};
                     ShowItemsInFrame(mainFunctionality);
                 }
-
-                else if (choice == 2)
+                // end faculty branch
+                else if (choice == 2) // Repository branch
                 {
-
+                    // Features
                     string[] mainFunctionality = {"Add a repository",
-                                                    "Show the repository",
+                                                    "Show all repositories",
                                                      "Find the repository ( by id )" ,
                                                     "Update the repository ( by id )",
                                                      "Remove a repository ( by id )",
                                                     "Clear all",
-                                                    "Medicine management",
                                                     "Equipment mamagement",
+                                                    "Medicine management",
                                                     "Quit"};
 
                     string[] medicineFunctionality = {"Add a medicine",
-                                                        "Show the medicine",
+                                                        "Show all medicines",
                                                          "Find the medicine( by id )" ,
                                                         "Update the medicine( by id )",
                                                          "Remove a medicine( by id )",
-                                                        "Clear all"};
+                                                        "Clear all",
+                                                        "Quit"};
 
                     string[] equipmentFunctionality = {"Add a equipment",
-                                                        "Show the equipment",
+                                                        "Show all equipments",
                                                          "Find the equipment( by id )" ,
                                                         "Update the equipment( by id )",
                                                          "Remove a equipment( by id )",
-                                                        "Clear all"};
+                                                        "Clear all",
+                                                        "Quit"};
+                    // Logic 
                     while (true)
                     {
-                        ClearScreen();
-                        ShowFrame();
-                        ShowItemsInFrame(mainFunctionality);
+                        ShowFunctionality(mainFunctionality);
                         int choiceOfRepo = -1;
                         int isQuit = 0;
+                        Console.Write("Choose: ");
                         choiceOfRepo = Int32.Parse(Console.ReadLine());
                         string idFind = "";
                         switch (choiceOfRepo)
                         {
                             case 1:
                                 ad.AddRepository();
+                                Console.ReadKey();
+
                                 break;
                             case 2:
                                 ad.ShowAllRepository();
+                                Console.ReadKey();
                                 break;
                             case 3:
+                                Console.Write("Input id want to find: ");
                                 idFind = Console.ReadLine();
                                 ad.ShowRepository(idFind);
+                                Console.ReadKey();
+
                                 break;
                             case 4:
+                                Console.Write("Input id want to update: ");
                                 idFind = Console.ReadLine();
                                 ad.UpdateRepository(idFind);
+                                Console.ReadKey();
+
                                 break;
                             case 5:
+                                Console.Write("Input id want to remove: ");
                                 idFind = Console.ReadLine();
                                 ad.RemoveRepository(idFind);
+                                Console.ReadKey();
+
                                 break;
                             case 6:
+                                ad.ClearRepository();
+                                Console.ReadKey();
+
                                 break;
                             case 7:
+                                ImplementFeatures(ad, equipmentFunctionality, 1);
                                 break;
                             case 8:
+                                ImplementFeatures(ad, medicineFunctionality, 2);
                                 break;
                             case 9:
                                 isQuit = 1;
@@ -140,6 +280,7 @@ namespace hospitalManagement
                         }
                     }
                 }
+                //end repository branch
                 else if (choice == 3)
                 {
                     break;
@@ -147,6 +288,7 @@ namespace hospitalManagement
 
 
             }
+
         }
     }
 }

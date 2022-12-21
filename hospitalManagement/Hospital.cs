@@ -97,11 +97,11 @@ namespace hospitalManagement
         }
         public void ShowFaculty(string id)
         {
-            this.Faculties.FindItem(id).Output();
+            this.Faculties.FindItem(id)?.Output();
         }
         public void ShowRepository(string id)
         {
-            this.Repo.FindItem(id).Output();
+            this.Repo.FindItem(id)?.Output();
         }
         public void ShowAllFaculty()
         {

@@ -13,11 +13,15 @@ namespace hospitalManagement
         void RemoveMedicine(string id);
         Medicine FindMedicine(string id);
         Medicine UpdateMedicine(string id);
+
+        void ClearMedicine();
         //
         void AddEquipment();
         void RemoveEquipment(string id);
         Equipment FindEquipment(string id);
         Equipment UpdateEquipment(string id);
+
+        void ClearEquipment();
 
     }
 }

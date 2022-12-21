@@ -8,13 +8,13 @@ namespace hospitalManagement
 {
     internal class Doctor : Employee
     {
-        
+
 
         private List<Patient> patientList;
 
         // Dynamic field
         // Properties
-        
+
         internal List<Patient> PatientList { get => patientList; set => patientList = value; }
 
         // Constructors
@@ -34,7 +34,7 @@ namespace hospitalManagement
         , bool state
         , ComeAndLeaveDate admissionDates
         , Salary salaries
-        , List<Patient> patientList) : base(id
+        ) : base(id
             , firstName
             , lastName
             , age
@@ -47,14 +47,15 @@ namespace hospitalManagement
             , departmentId
             , state
             , admissionDates
-            , salaries)
+            , salaries
+            )
         {
-           
+
             this.PatientList = patientList;
         }
 
         // Destructors
-        ~Doctor () { }
+        ~Doctor() { }
         // Methods
         // in, Output
         public override void Input()
@@ -83,7 +84,7 @@ namespace hospitalManagement
 
 
         // Overriding
-       
+
         public override void ExportBill()
         {
             base.ExportBill();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal class OutPatient:Patient
+    internal class OutPatient : Patient
     {
         //Field	
         // Infor field	

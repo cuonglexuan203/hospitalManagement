@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace hospitalManagement
 {
-    internal abstract class Employee : IBill 
+    internal abstract class Employee : IBill
     {
         //Field
         private string id;
@@ -59,7 +59,7 @@ namespace hospitalManagement
 
         public Employee() { }
 
-        public Employee (string Id
+        public Employee(string Id
         , string firstName
         , string lastName
         , int age
@@ -73,7 +73,7 @@ namespace hospitalManagement
         , bool state
         , ComeAndLeaveDate admissionDates
         , Salary salaries
-        , List<Patient> patientList)
+        )
         {
             this.Id = Id;
             this.firstName = firstName;
@@ -127,7 +127,7 @@ namespace hospitalManagement
             Console.Write("Salaries: ");
             Salaries.Input();
 
-            
+
         }
         public virtual void Output()
         {

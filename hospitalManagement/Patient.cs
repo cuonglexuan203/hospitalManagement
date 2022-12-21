@@ -225,7 +225,7 @@ namespace hospitalManagement
        + $"Fees: {Fees} "
        + $"AdmissionDates: {AdmissionDates} ";
 
-        public void ExportBill()
+        public virtual void ExportBill()
         {
             DateTime now = DateTime.Now;
 
@@ -261,7 +261,7 @@ namespace hospitalManagement
             Console.WriteLine($"TOTAL: {temp + (temp * 8 / 100)}");
         }
 
-        public float CalcBill()
+        public virtual float CalcBill()
         => Fees.DrugCosts + Fees.TreatmentCosts + Fees.AdvanceFee;
 
     }

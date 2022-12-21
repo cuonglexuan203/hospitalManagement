@@ -17,5 +17,8 @@ namespace hospitalManagement
         void ShowAllFaculty();
         void ShowAllRepository();
 
+        void UpdateFaculty(string id);
+        void UpdateRepository(string id);
+
     }
 }

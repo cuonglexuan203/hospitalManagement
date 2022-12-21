@@ -53,7 +53,7 @@ namespace hospitalManagement
                 int choiceTransportation = 0;
                 string[] em = { nameof(Ambulance) };
                 string[] nonEm = { nameof(WheelChair), nameof(AmbulatoryTransportation), nameof(FlightEscort), nameof(Stretcher) };
-                while (index < em.Length)
+
                 {
                     Console.WriteLine($"{index}. {em[index++]}");
                 }

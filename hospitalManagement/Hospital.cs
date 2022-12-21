@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal class Hospital
+    internal class Hospital : IHospitalActivities
     {
         //Field
         private Faculties faculties;
@@ -59,6 +59,21 @@ namespace hospitalManagement
             Console.WriteLine($"Address: {Address}");
             Console.WriteLine($"Number of faculty: {faculties.Count}");
             Console.WriteLine($"Number of repository: {repo.Count}");
+            Console.Write("Do you want to show the faculty information?(1.yes, 0.no): ");
+            int choice = Int32.Parse(Console.ReadLine());
+            if (choice == 1)
+            {
+                Faculties.ShowInformation();
+            }
+            Console.Write("Do you want to show the repository information?(1.yes, 0.no): ");
+            choice = Int32.Parse(Console.ReadLine());
+
+            if (choice == 1)
+            {
+                Repo.ShowInformation();
+            }
+
+
 
         }
         // General method

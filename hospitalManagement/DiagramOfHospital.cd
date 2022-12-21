@@ -64,7 +64,7 @@
       <HashCode>AAAAQAgAAAAABAAARAEAEAwAgAAAAAAEAAAAAABAAAA=</HashCode>
       <FileName>Equipments.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="hospitalManagement.Faculties" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="7.25" Y="4.75" Width="1.5" />
@@ -98,9 +98,10 @@
   <Class Name="hospitalManagement.Hospital" Collapsed="true">
     <Position X="15" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAAAEAAAAgAAAAIAEIAAQBEAIEAAACAAAAAAAAAAA=</HashCode>
+      <HashCode>AQAAAAEQAAAgQAAAIAEIAiQBGAIEBAACgAAAAAABAAA=</HashCode>
       <FileName>Hospital.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="hospitalManagement.InPatient" Collapsed="true">
     <Position X="5.5" Y="8.75" Width="1.5" />
@@ -129,7 +130,7 @@
       <HashCode>AAAAQAAAAAAAhAAABIAAEAQAgAAAAAAEAAAAAABAAAA=</HashCode>
       <FileName>Medicines.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="hospitalManagement.MovementEquipment" Collapsed="true">
     <Position X="19.5" Y="8.5" Width="1.75" />
@@ -155,7 +156,7 @@
   <Class Name="hospitalManagement.Nurse" Collapsed="true">
     <Position X="11.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAIAAIAEAAAAAAAAAAAACAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAIAEAAAAAAAAAEAACABAAA=</HashCode>
       <FileName>Nurse.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -215,9 +216,10 @@
   <Class Name="hospitalManagement.Repository" Collapsed="true">
     <Position X="23" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAgAAAAgAAAEZJAIAAQQEAAEAAAAAAAAAAAAAgA=</HashCode>
+      <HashCode>IAAGAAgAAAggAQAEdJAIAAQQEEAEIQAAAAAAAAAAAgA=</HashCode>
       <FileName>Repository.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="hospitalManagement.Salary" Collapsed="true">
     <Position X="24" Y="0.5" Width="1.5" />
@@ -252,6 +254,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAACAAAAA=</HashCode>
       <FileName>IBill.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="hospitalManagement.IRepositoryActivities" Collapsed="true">
+    <Position X="1.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAEAAAAAAgAAQAAEAAAAAAAAEAAIQAAAAAAAAAAAAA=</HashCode>
+      <FileName>IRepositoryActivities.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

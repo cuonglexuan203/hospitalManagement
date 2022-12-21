@@ -13,9 +13,9 @@ namespace hospitalManagement
             Hospital ad = new Hospital();
             ad.Input();
             ad.AddRepository();
+            ad.Repo.RepositoryList[0]?.AddEquipment();
             ad.Output();
-            ad.ShowAllRepository();
-
+            //ad.ShowAllRepository();
         }
     }
 }

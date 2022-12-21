@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal class Repository
+    internal class Repository : IRepositoryActivities
     {
 
         //Field
@@ -88,5 +88,46 @@ namespace hospitalManagement
             $"\nRoom: {Room}" +
             $"\nMedicines count: {MedicinesList.Count} " +
             $"\nEquipment count: {EquipmentsList.Count}";
+
+        public void AddMedicine()
+        {
+
+            this.MedicinesList.AddItem();
+        }
+
+        public void RemoveMedicine(string id)
+        {
+            this.MedicinesList.RemoveItem(id);
+        }
+
+        public Medicine FindMedicine(string id)
+        {
+            return this.MedicinesList.FindItem(id);
+        }
+
+        public Medicine UpdateMedicine(string id)
+        {
+            return this.MedicinesList.UpdateItem(id);
+        }
+
+        public void AddEquipment()
+        {
+            this.EquipmentsList.AddItem();
+        }
+
+        public void RemoveEquipment(string id)
+        {
+            this.EquipmentsList.RemoveItem(id);
+        }
+
+        public Equipment FindEquipment(string id)
+        {
+            return this.EquipmentsList.FindItem(id);
+        }
+
+        public Equipment UpdateEquipment(string id)
+        {
+            return this.EquipmentsList.UpdateItem(id);
+        }
     }
 }

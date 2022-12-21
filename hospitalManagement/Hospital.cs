@@ -64,7 +64,14 @@ namespace hospitalManagement
         // General method
 
         // Other method
-
+        public void AddFaculty()
+        {
+            this.Faculties.AddItem();
+        }
+        public void AddRepository()
+        {
+            this.Repo.AddItem();
+        }
         // Overriding
 
     }

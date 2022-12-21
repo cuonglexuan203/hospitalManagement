@@ -121,6 +121,16 @@ namespace hospitalManagement
         {
             this.Repo.UpdateItem(id);
         }
+
+        public void ClearFaculty()
+        {
+            this.faculties.Clear();
+        }
+
+        public void ClearRepository()
+        {
+            this.Repo.Clear();
+        }
         // Overriding
 
     }

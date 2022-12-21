@@ -18,5 +18,6 @@ namespace hospitalManagement
         void RemoveEquipment(string id);
         Equipment FindEquipment(string id);
         Equipment UpdateEquipment(string id);
+
     }
 }

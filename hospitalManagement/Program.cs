@@ -118,8 +118,11 @@ namespace hospitalManagement
                                 break;
                             case 4:
                                 idFind = Console.ReadLine();
+                                ad.UpdateRepository(idFind);
                                 break;
                             case 5:
+                                idFind = Console.ReadLine();
+                                ad.RemoveRepository(idFind);
                                 break;
                             case 6:
                                 break;

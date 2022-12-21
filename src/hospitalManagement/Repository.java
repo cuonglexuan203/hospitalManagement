@@ -169,4 +169,12 @@ public class Repository implements IRepositoryActivities {
   {
       return this.getEquipmentList().UpdateItem(id);
   }
+  public void ClearEquipment()
+  {
+      this.getEquipmentList().Clear();
+  }
+  public void ClearMedicine()
+  {
+      this.getMedicineList().Clear();
+  }
 }

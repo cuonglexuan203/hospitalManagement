@@ -133,5 +133,24 @@ public class Hospital implements IHospitalActivities {
         this.repo.ShowInformation();
     }
     // Overriding
+    public void UpdateFaculty(String id)
+    {
+        this.getFaculties().UpdateItem(id);
+    }
+
+    public void UpdateRepository(String id)
+    {
+        this.getRepo().UpdateItem(id);
+    }
+
+    public void ClearFaculty()
+    {
+        this.getFaculties().Clear();
+    }
+
+    public void ClearRepository()
+    {
+        this.getRepo().Clear();
+    }
 
 }

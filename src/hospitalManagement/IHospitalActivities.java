@@ -9,4 +9,8 @@ public interface IHospitalActivities {
     void ShowRepository(String id);
     void ShowAllFaculty();
     void ShowAllRepository();
+    void UpdateFaculty(String id);
+    void UpdateRepository(String id);
+    void ClearFaculty();
+    void ClearRepository();
 }

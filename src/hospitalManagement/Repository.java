@@ -2,7 +2,7 @@ package hospitalManagement;
 
 import java.util.Scanner;
 
-public class Repository {
+public class Repository implements IRepositoryActivities {
   //Field
   private String id;
 
@@ -126,5 +126,45 @@ public class Repository {
 	          "\nRoom: " + room +
 	          "\nMedicines count:  " + medicineList.getCount() +
 	          "\nEquipment count: " + equipmentList.getCount();
+  }
+  public void AddMedicine()
+  {
+
+      this.getMedicineList().AddItem();
+  }
+
+  public void RemoveMedicine(String id)
+  {
+      this.getMedicineList().RemoveItem(id);
+  }
+
+  public Medicine FindMedicine(String id)
+  {
+      return this.getMedicineList().FindItem(id);
+  }
+
+  public Medicine UpdateMedicine(String id)
+  {
+      return this.getMedicineList().UpdateItem(id);
+  }
+
+  public void AddEquipment()
+  {
+      this.getEquipmentList().AddItem();
+  }
+
+  public void RemoveEquipment(String id)
+  {
+      this.getEquipmentList().RemoveItem(id);
+  }
+
+  public Equipment FindEquipment(String id)
+  {
+      return this.getEquipmentList().FindItem(id);
+  }
+
+  public Equipment UpdateEquipment(String id)
+  {
+      return this.getEquipmentList().UpdateItem(id);
   }
 }

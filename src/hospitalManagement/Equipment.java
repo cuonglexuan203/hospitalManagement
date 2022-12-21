@@ -2,7 +2,7 @@ package hospitalManagement;
 
 import java.util.Scanner;
 
-public class Equipment {
+public class Equipment  {
 	 //Field
     private String id;
 

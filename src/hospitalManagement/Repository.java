@@ -15,7 +15,7 @@ public class Repository implements IRepositoryActivities {
   private Equipments equipmentList;
 
   // Dynamic field
-  private static Scanner input = new Scanner(System.in);
+
 
   // Properties
 
@@ -94,6 +94,7 @@ public class Repository implements IRepositoryActivities {
   // Methods
   // in, output
   public void Input() {
+	Scanner input = new Scanner(System.in);
     System.out.print("Id: ");
     id = input.nextLine();
     System.out.print("Name: ");
@@ -102,6 +103,7 @@ public class Repository implements IRepositoryActivities {
     description = input.nextLine();
     System.out.print("Room number: ");
     room = input.nextLine();
+    input.close();
   }
 
   public void Output() {

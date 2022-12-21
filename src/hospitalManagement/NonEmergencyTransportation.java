@@ -6,7 +6,7 @@ public abstract class NonEmergencyTransportation extends MovementEquipment {
 	//Field
     private String clientRequirement;
     private String purpose;
-    // Infor field
+    // Information field
     //  Management field
     // Dynamic field
     // Properties
@@ -39,13 +39,13 @@ public abstract class NonEmergencyTransportation extends MovementEquipment {
        , int quantity
        , int numberOfSeat
        , String destination
-        , String clientRequiremnt
+        , String clientRequirement
         , String purpose
        )
     {
 		super(id, name, description, price, state, origin, quantity, numberOfSeat, destination);
-        clientRequiremnt = clientRequiremnt;
-        purpose = purpose;
+        this.clientRequirement = clientRequirement;
+        this.purpose = purpose;
     }
 
     public NonEmergencyTransportation()

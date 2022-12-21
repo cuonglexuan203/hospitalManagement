@@ -19,14 +19,8 @@ namespace hospitalManagement
 
         }
 
-        public Neurology(string id, string name, string description, string room, Doctors doctorList, Patients patientList)
+        public Neurology(string id, string name, string description, string room, Employees employeeList, Patients patientList) : base(id, name, description, room, employeeList, patientList)
         {
-            Id = id;
-            Name = name;
-            Description = description;
-            Room = room;
-            DoctorList = doctorList;
-            PatientList = patientList;
         }
         // Destructors
         ~ Neurology()
@@ -38,11 +32,6 @@ namespace hospitalManagement
         public override void Input()
         {
             base.Input();
-        }
-
-        public override void Input1()
-        {
-            base.Input1();
         }
 
         public override void Output()

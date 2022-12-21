@@ -6,3 +6,10 @@ F:\SayHello\HCMUTE\Subjects\2022-2023\Semester 1\Object-oriented Programming\MrV
 F:\SayHello\HCMUTE\Subjects\2022-2023\Semester 1\Object-oriented Programming\MrVinh\FinalProject\WorkSpace\hospitalManagement\main\hospitalManagement\hospitalManagement\obj\Debug\hospitalManagement.csproj.CoreCompileInputs.cache
 F:\SayHello\HCMUTE\Subjects\2022-2023\Semester 1\Object-oriented Programming\MrVinh\FinalProject\WorkSpace\hospitalManagement\main\hospitalManagement\hospitalManagement\obj\Debug\hospitalManagement.exe
 F:\SayHello\HCMUTE\Subjects\2022-2023\Semester 1\Object-oriented Programming\MrVinh\FinalProject\WorkSpace\hospitalManagement\main\hospitalManagement\hospitalManagement\obj\Debug\hospitalManagement.pdb
+C:\Users\ADMIN\Desktop\New folder\hospitalManagement\hospitalManagement\bin\Debug\hospitalManagement.exe.config
+C:\Users\ADMIN\Desktop\New folder\hospitalManagement\hospitalManagement\bin\Debug\hospitalManagement.exe
+C:\Users\ADMIN\Desktop\New folder\hospitalManagement\hospitalManagement\bin\Debug\hospitalManagement.pdb
+C:\Users\ADMIN\Desktop\New folder\hospitalManagement\hospitalManagement\obj\Debug\hospitalManagement.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Desktop\New folder\hospitalManagement\hospitalManagement\obj\Debug\hospitalManagement.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\New folder\hospitalManagement\hospitalManagement\obj\Debug\hospitalManagement.exe
+C:\Users\ADMIN\Desktop\New folder\hospitalManagement\hospitalManagement\obj\Debug\hospitalManagement.pdb

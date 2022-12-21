@@ -147,6 +147,127 @@ namespace hospitalManagement
             }
 
         }
+
+
+
+        
+        public static void ImplementFaculty(Hospital ad, string[] features, int type)
+        {
+            string idFac = "";
+            Console.Write("Input id of the faculty want to add item: ");
+            idFac = Console.ReadLine();
+            Faculty root = ad.Faculties.FindItem(idFac);
+            if (root == null)
+            {
+                Console.ReadKey();
+                return;
+            }
+            while (true)
+            {
+                ShowFunctionality(features);
+                int choice = -1;
+                int isQuit = 0;
+                choice = Int32.Parse(Console.ReadLine());
+                string idFind = "";
+                switch (choice)
+                {
+                    case 1:
+
+                        if (type == 1) // patient
+                        {
+                            root.AddPatient();
+                        }
+                        else if (type == 2) // employee
+                        {
+                            root.AddEmployee();
+                        }
+                        Console.ReadKey();
+                        break;
+                    case 2:
+                        if (type == 1)
+                        {
+                            root.PatientList.ShowInformation();
+                        }
+                        else if (type == 2)
+                        {
+                            root.EmployeeList.ShowInformation();
+                        }
+                        Console.ReadKey();
+
+                        break;
+                    case 3:
+                        Console.WriteLine("Input id want to find: ");
+                        idFind = Console.ReadLine();
+
+                        if (type == 1)
+                        {
+                            root.FindPatient(idFind)?.Output();
+                        }
+                        else if (type == 2)
+                        {
+                            root.FindEmployee(idFind)?.Output();
+                        }
+                        Console.ReadKey();
+
+                        break;
+                    case 4:
+                        Console.WriteLine("Input id want to update: ");
+                        idFind = Console.ReadLine();
+
+                        if (type == 1)
+                        {
+                            root.UpdatePatient(idFind);
+                        }
+                        else if (type == 2)
+                        {
+                            root.UpdateEmployee(idFind);
+                        }
+                        Console.ReadKey();
+
+                        break;
+                    case 5:
+                        Console.WriteLine("Input id want to remove: ");
+                        idFind = Console.ReadLine();
+
+                        if (type == 1)
+                        {
+                            root.RemovePatient(idFind);
+                        }
+                        else if (type == 2)
+                        {
+                            root.RemoveEmployee(idFind);
+                        }
+                        Console.ReadKey();
+
+                        break;
+                    case 6:
+
+
+                        if (type == 1)
+                        {
+                            root.ClearPatient();
+                        }
+                        else if (type == 2)
+                        {
+                            root.ClearEmployee();
+                        }
+                        Console.ReadKey();
+
+                        break;
+                    case 7:
+                        isQuit = 1;
+                        break;
+                }
+                if (isQuit == 1)
+                {
+                    break;
+                }
+            }
+
+        }
+        
+
+
         //
         static void Main(string[] args)
         {
@@ -170,7 +291,10 @@ namespace hospitalManagement
                                                         "Find a faculty (by id)",
                                                         "Update a faculty (by id)",
                                                         "Remove a faculty (by id)",
-                                                        "Clear all of faculties"};
+                                                        "Clear all of faculties",
+                                                        "Patient",
+                                                        "Employee",
+                                                        "Quit"};
 
                     string[] patientFunctionality = {
                                                         "Add a patient",
@@ -178,7 +302,9 @@ namespace hospitalManagement
                                                         "Find a patient (by id)",
                                                         "Update a patient (by id)",
                                                         "Remove a patient(by id)",
-                                                        "Clear all of patients"};
+                                                        "Clear all of patients",
+                                                        "Quit"};
+
 
                     string[] employeeFunctionality = {
                                                         "Add a employee",
@@ -186,8 +312,61 @@ namespace hospitalManagement
                                                         "Find a employees (by id)",
                                                         "Update a employee (by id)",
                                                         "Remove a employee (by id)",
-                                                        "Clear all of employees"};
-                    ShowItemsInFrame(mainFunctionality);
+                                                        "Clear all of employees",
+                                                        "Quit"};
+                    while (true)
+                    {
+                        ClearScreen();
+                        ShowFrame();
+                        ShowItemsInFrame(mainFunctionality);
+                        int choiceOfFac = -1;
+                        int isQuit = 0;
+                        choiceOfFac = Int32.Parse(Console.ReadLine());
+                        string idFind = "";
+                        switch (choiceOfFac)
+                        {
+                            case 1:
+                                ad.AddFaculty();
+                                break;
+                            case 2:
+                                ad.ShowAllFaculty();
+                                Console.ReadKey();
+                                break;
+                            case 3:
+                                Console.Write("Input id want to find: ");
+                                idFind = Console.ReadLine();
+                                ad.ShowFaculty(idFind);
+                                Console.ReadKey();
+                                break;
+                            case 4:
+                                Console.Write("Input id want to update: ");
+                                idFind = Console.ReadLine();
+                                ad.UpdateFaculty(idFind);
+                                break;
+                            case 5:
+                                Console.Write("Input id want to remove: ");
+                                idFind = Console.ReadLine();
+                                ad.RemoveFaculty(idFind);
+                                break;
+                            case 6:
+                                ad.ClearFaculty();
+                                break;
+                            case 7:
+                                ImplementFaculty(ad, patientFunctionality, 1);
+                                break;
+                            case 8:
+                                ImplementFaculty(ad, employeeFunctionality, 2);
+                                break;
+                            case 9:
+                                isQuit = 1;
+                                ClearScreen();
+                                break;
+                        }
+                        if (isQuit == 1)
+                        {
+                            break;
+                        }
+                    }
                 }
                 // end faculty branch
                 else if (choice == 2) // Repository branch
@@ -272,6 +451,7 @@ namespace hospitalManagement
                                 break;
                             case 9:
                                 isQuit = 1;
+                                ClearScreen();
                                 break;
                         }
                         if (isQuit == 1)

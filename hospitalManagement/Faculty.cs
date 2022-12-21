@@ -15,7 +15,7 @@ namespace hospitalManagement
         private string description;
         private string room;
         //  Management field
-        private Doctors doctorList;
+        private Employees employeeList;
         private Patients patientList;
         // Dynamic field
         // Properties
@@ -24,24 +24,25 @@ namespace hospitalManagement
         public string Name { get => name; set => name = value; }
         public string Description { get => description; set => description = value; }
         public string Room { get => room; set => room = value; }
-        internal Doctors DoctorList { get => doctorList; set => doctorList = value; }
+      
         internal Patients PatientList { get => patientList; set => patientList = value; }
+        internal Employees EmployeeList { get => employeeList; set => employeeList = value; }
 
         // Constructors
         public Faculty()
         {
-            doctorList = new Doctors();
+            employeeList = new Employees();
             patientList = new Patients();
            
 
         }
-        public Faculty(string id, string name, string description, string room, Doctors doctorList, Patients patientList)
+        public Faculty(string id, string name, string description, string room, Employees employeeList, Patients patientList)
         {
             this.id = id;
             this.name = name;
             this.description = description;
             this.room = room;
-            this.doctorList = doctorList;
+            this.employeeList = employeeList;
             this.patientList = patientList;
         }
 
@@ -60,34 +61,6 @@ namespace hospitalManagement
             Description = Console.ReadLine();
         }
 
-        public virtual void Input1()
-        {
-            Console.Write("ID: ");
-            Id = Console.ReadLine();
-            Console.Write("Name: ");
-            Name = Console.ReadLine();
-            Console.Write("Description: ");
-            Description = Console.ReadLine();
-            Console.WriteLine("List of doctors: ");
-            Console.WriteLine("Number of doctors: ");
-            int i = Convert.ToInt32(Console.ReadLine());
-
-            for (int j = 0; j < i; j++)
-            {
-                Doctor doctor = new Doctor();
-                DoctorList.AddItem(doctor);
-            }
-
-            Console.WriteLine("The patient list: ");
-            Console.WriteLine("Number of patient in charge: ");
-            int k = Convert.ToInt32(Console.ReadLine());
-
-            for (int j = 0; j < k; j++)
-            {
-                Patient patient = new Patient();
-                PatientList.AddItem(patient);
-            }
-        }
 
         public virtual void Output()
         {
@@ -98,11 +71,72 @@ namespace hospitalManagement
             Console.WriteLine($"Room: {Room}");
             Console.WriteLine($"The patients list: {patientList.Count}");
             patientList.ShowInformation();
-            Console.WriteLine($"The doctors list: {doctorList.Count}");
-            doctorList.ShowInformation();
+            Console.WriteLine($"The employees list: {employeeList.Count}");
+            employeeList.ShowInformation();
         }
         // General method
         // Other method
         // Overriding
+
+        public void AddPatient()
+        {
+
+            this.PatientList.AddItem();
+        }
+
+        public void RemovePatient(string id)
+        {
+            this.PatientList.RemoveItem(id);
+        }
+
+        public void ShowAllPatients()
+        {
+            this.PatientList.ShowInformation();
+        }
+
+        public Patient FindPatient(string id)
+        {
+            return this.PatientList.FindItem(id);
+        }
+
+        public Patient UpdatePatient(string id)
+        {
+            return this.PatientList.UpdateItem(id);
+        }
+
+        public void AddEmployee()
+        {
+            this.EmployeeList.AddItem();
+        }
+
+        public void RemoveEmployee(string id)
+        {
+            this.EmployeeList.RemoveItem(id);
+        }
+
+        public void ShowAllEmployee()
+        {
+            this.EmployeeList.ShowInformation();
+        }
+
+        public Employee FindEmployee(string id)
+        {
+            return this.EmployeeList.FindItem(id);
+        }
+
+        public Employee UpdateEmployee(string id)
+        {
+            return this.EmployeeList.UpdateItem(id);
+        }
+
+        public void ClearPatient()
+        {
+            this.PatientList.Clear();
+        }
+
+        public void ClearEmployee()
+        {
+            this.EmployeeList.Clear();
+        }
     }
 }

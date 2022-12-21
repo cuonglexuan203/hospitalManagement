@@ -57,7 +57,10 @@ namespace hospitalManagement
         public Salary Salaries { get => salaries; set => salaries = value; }
         // Constructors
 
-        public Employee() { }
+        public Employee() {
+            AdmissionDates = new ComeAndLeaveDate();
+            Salaries = new Salary();
+        }
 
         public Employee(string Id
         , string firstName

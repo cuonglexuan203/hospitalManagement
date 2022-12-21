@@ -39,9 +39,9 @@ namespace hospitalManagement
         // in, Output
         public void Input()
         {
-            Console.Write("hospitalAdmissionDate: ");
+            Console.WriteLine("hospitalAdmissionDate: ");
             HospitalAdmissionDate = Console.ReadLine();
-            Console.Write("hospitalDischargeDate: ");
+            Console.WriteLine("hospitalDischargeDate: ");
             HospitalDischargeDate = Console.ReadLine();
         }
         public void Input(string hospitalAdmissionDate

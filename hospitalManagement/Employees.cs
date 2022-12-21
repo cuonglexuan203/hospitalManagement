@@ -6,37 +6,35 @@ using System.Threading.Tasks;
 
 namespace hospitalManagement
 {
-    internal class Patients:IBasicActivities<Patient>
+    internal class Employees : IBasicActivities<Employee>
     {
         //Field	
-        private List<Patient> patientList;
+        private List<Employee> employeeList;
         private long count;
+
 
         // Infor field	
         //  Management field	
         // Dynamic field	
         // Properties	
-
+        internal List<Employee> EmployeeList { get => employeeList; set => employeeList = value; }
         public long Count { get => count; set => count = value; }
-        internal List<Patient> PatientList { get => patientList; set => patientList = value; }
-
-
         // Constructors	
-        public Patients()
+        public Employees()
         {
-            patientList = new List<Patient>();
+            EmployeeList= new List<Employee>();
             count = 0;
         }
 
-        public Patients(List<Patient> patientList, long count)
+        public Employees(List<Employee> employeeList, long count)
         {
-            this.patientList = patientList;
+            this.employeeList = employeeList;
             this.count = count;
         }
 
 
         // Destructors	
-        ~Patients() { }
+        ~Employees() { }
 
         // Methods	
         // in, output
@@ -46,40 +44,40 @@ namespace hospitalManagement
 
         public void AddItem()
         {
-            Console.WriteLine("New the Patient");
-            Console.WriteLine("Type of Patient(choose one): 1.OutPatient 2.InPatient\n");
+            Console.WriteLine("New the Employee");
+            Console.WriteLine("Type of Employee (choose one): 1.Doctor 2.Nurse\n");
             string choice = Console.ReadLine();
-            Patient patient = null;
-            if (choice.ToLower() == "OutPatient" || Int32.Parse(choice) == 1)
+            Employee employee = null;
+            if (choice.ToLower() == "Doctor" || Int32.Parse(choice) == 1)
             {
-                patient = new OutPatient();
+                employee = new Doctor();
             }
             else
             {
-                patient = new InPatient();
+                employee = new Nurse();
             }
-            patient.Input();
-            patientList.Add(patient);
+            employee.Input();
+            employeeList.Add(employee);
             this.Count++;
             Console.WriteLine("Done!");
         }
 
-    
+
 
         public void ShowInformation()
         {
-            Console.WriteLine("Show information of all patients");
+            Console.WriteLine("Show information of all employees");
 
-            patientList.ForEach(value => { value.Output(); Console.WriteLine(); });
+            employeeList.ForEach(value => { value.Output(); Console.WriteLine(); });
             Console.WriteLine("Done!");
         }
 
-        public Patient UpdateItem(string id)
+        public Employee UpdateItem(string id)
         {
-            Console.WriteLine("Update the patient");
+            Console.WriteLine("Update the employee");
 
-            Patient res = null;
-            patientList.ForEach(value =>
+            Employee res = null;
+            employeeList.ForEach(value =>
             {
                 if (value.Id == id)
                 {
@@ -89,7 +87,7 @@ namespace hospitalManagement
             });
             if (res == null)
             {
-                Console.WriteLine($"Not found the patient with id:{id}");
+                Console.WriteLine($"Not found the employee with id:{id}");
 
             }
             else
@@ -102,21 +100,21 @@ namespace hospitalManagement
 
         public bool RemoveItem(string id)
         {
-            Console.WriteLine("Remove the patient");
+            Console.WriteLine("Remove the employee");
 
             bool res = false;
-            patientList.ForEach(value =>
+            employeeList.ForEach(value =>
             {
                 if (value.Id == id)
                 {
-                    patientList.Remove(value);
+                    employeeList.Remove(value);
                     res = true;
                     this.Count--;
                 }
             });
             if (res == false)
             {
-                Console.WriteLine($"Not found patient with id: {id}");
+                Console.WriteLine($"Not found employee with id: {id}");
 
             }
             else
@@ -127,10 +125,10 @@ namespace hospitalManagement
             return res;
         }
 
-        public Patient FindItem(string id)
+        public Employee FindItem(string id)
         {
-            Patient res = null;
-            patientList.ForEach(value =>
+            Employee res = null;
+            employeeList.ForEach(value =>
             {
                 if (value.Id == id)
                 {
@@ -139,7 +137,7 @@ namespace hospitalManagement
             });
             if (res == null)
             {
-                Console.WriteLine($"Not found patient with id: {id}");
+                Console.WriteLine($"Not found employee with id: {id}");
 
             }
             else
@@ -152,10 +150,10 @@ namespace hospitalManagement
 
         public bool Clear()
         {
-            Console.WriteLine("Clear all patients");
+            Console.WriteLine("Clear all employee");
 
-            patientList.Clear();
-            if (patientList.Count > 0)
+            employeeList.Clear();
+            if (employeeList.Count > 0)
             {
                 Console.WriteLine("Failure");
                 return false;

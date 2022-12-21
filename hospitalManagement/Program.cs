@@ -12,7 +12,10 @@ namespace hospitalManagement
         {
             Hospital ad = new Hospital();
             ad.Input();
+            ad.AddRepository();
             ad.Output();
+            ad.ShowAllRepository();
+
         }
     }
 }

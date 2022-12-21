@@ -72,6 +72,30 @@ namespace hospitalManagement
         {
             this.Repo.AddItem();
         }
+        public void RemoveFaculty(string id)
+        {
+            this.Faculties.RemoveItem(id);
+        }
+        public void RemoveRepository(string id)
+        {
+            this.Repo.RemoveItem(id);
+        }
+        public void ShowFaculty(string id)
+        {
+            this.Faculties.FindItem(id).Output();
+        }
+        public void ShowRepository(string id)
+        {
+            this.Repo.FindItem(id).Output();
+        }
+        public void ShowAllFaculty()
+        {
+            this.Faculties.ShowInformation();
+        }
+        public void ShowAllRepository()
+        {
+            this.Repo.ShowInformation();
+        }
         // Overriding
 
     }

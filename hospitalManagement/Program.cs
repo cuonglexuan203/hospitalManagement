@@ -327,6 +327,7 @@ namespace hospitalManagement
                         {
                             case 1:
                                 ad.AddFaculty();
+                                Console.ReadKey();
                                 break;
                             case 2:
                                 ad.ShowAllFaculty();
@@ -342,20 +343,27 @@ namespace hospitalManagement
                                 Console.Write("Input id want to update: ");
                                 idFind = Console.ReadLine();
                                 ad.UpdateFaculty(idFind);
+                                Console.ReadKey();
+
                                 break;
                             case 5:
                                 Console.Write("Input id want to remove: ");
                                 idFind = Console.ReadLine();
                                 ad.RemoveFaculty(idFind);
+                                Console.ReadKey();
+
                                 break;
                             case 6:
                                 ad.ClearFaculty();
+                                Console.ReadKey();
                                 break;
                             case 7:
                                 ImplementFaculty(ad, patientFunctionality, 1);
+                                Console.ReadKey();
                                 break;
                             case 8:
                                 ImplementFaculty(ad, employeeFunctionality, 2);
+                                Console.ReadKey();
                                 break;
                             case 9:
                                 isQuit = 1;

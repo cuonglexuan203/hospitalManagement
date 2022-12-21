@@ -103,32 +103,32 @@ namespace hospitalManagement
         {
             Console.Write("Employee Id: ");
             Id = Console.ReadLine();
-            Console.Write("FirstName: ");
-            FirstName = Console.ReadLine();
-            Console.Write("LastName: ");
-            LastName = Console.ReadLine();
-            Console.Write("Age: ");
-            Age = Int32.Parse(Console.ReadLine());
-            Console.Write("Gentle (0: male, 1: female): ");
-            Gentle = Int32.Parse(Console.ReadLine());
-            Console.Write("Description: ");
-            Description = Console.ReadLine();
-            Console.Write("Address: ");
-            Address = Console.ReadLine();
-            Console.Write("Email: ");
-            Email = Console.ReadLine();
-            Console.Write("Phone: ");
-            Phone = Console.ReadLine();
-            Console.Write("FacultyId: ");
-            FacultyId = Console.ReadLine();
-            Console.Write("DepartmentId: ");
-            DepartmentId = Console.ReadLine();
-            Console.Write("State(1: free, other: 0): ");
-            State = Int32.Parse(Console.ReadLine()) == 1 ? true : false;
-            Console.Write("AdmissionDates: ");
-            AdmissionDates.Input();
-            Console.Write("Salaries: ");
-            Salaries.Input();
+            //Console.Write("FirstName: ");
+            //FirstName = Console.ReadLine();
+            //Console.Write("LastName: ");
+            //LastName = Console.ReadLine();
+            //Console.Write("Age: ");
+            //Age = Int32.Parse(Console.ReadLine());
+            //Console.Write("Gentle (0: male, 1: female): ");
+            //Gentle = Int32.Parse(Console.ReadLine());
+            //Console.Write("Description: ");
+            //Description = Console.ReadLine();
+            //Console.Write("Address: ");
+            //Address = Console.ReadLine();
+            //Console.Write("Email: ");
+            //Email = Console.ReadLine();
+            //Console.Write("Phone: ");
+            //Phone = Console.ReadLine();
+            //Console.Write("FacultyId: ");
+            //FacultyId = Console.ReadLine();
+            //Console.Write("DepartmentId: ");
+            //DepartmentId = Console.ReadLine();
+            //Console.Write("State(1: free, other: 0): ");
+            //State = Int32.Parse(Console.ReadLine()) == 1 ? true : false;
+            //Console.Write("AdmissionDates: ");
+            //AdmissionDates.Input();
+            //Console.Write("Salaries: ");
+            //Salaries.Input();
 
 
         }
@@ -146,9 +146,10 @@ namespace hospitalManagement
             Console.WriteLine("FacultyId: {0}", FacultyId);
             Console.WriteLine("DepartmentId: {0}", DepartmentId);
             Console.WriteLine("State: {0}", State);
-            Console.WriteLine("The patient list: ");
-            Console.WriteLine("AdmissionDates: {0}", AdmissionDates);
-            Console.WriteLine("Salaries: {0}", Salaries);
+            Console.WriteLine("AdmissionDates:");
+            AdmissionDates.Output();
+            Console.WriteLine("Salaries: ");
+            Salaries.Output();
 
         }
 

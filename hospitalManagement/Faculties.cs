@@ -100,14 +100,15 @@ namespace hospitalManagement
             Console.WriteLine("Remove the faculty");
 
             bool res = false;
-            facultyList.ForEach(value =>
+            for (int i = 0; i < facultyList.Count; i++)
             {
-                if (value.Id == id)
+                if (facultyList[i].Id == id)
                 {
-                    facultyList.Remove(value);
+                    facultyList.Remove(facultyList[i]);
                     res = true;
                 }
-            });
+            }
+
             if (res == false)
             {
                 Console.WriteLine($"Not found faculty with id: {id}");

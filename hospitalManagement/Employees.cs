@@ -68,7 +68,10 @@ namespace hospitalManagement
         {
             Console.WriteLine("Show information of all employees");
 
-            employeeList.ForEach(value => { value.Output(); Console.WriteLine(); });
+            for (int i = 0; i < employeeList.Count; i++)
+            {
+                employeeList[i].Output();
+            }
             Console.WriteLine("Done!");
         }
 
@@ -77,14 +80,11 @@ namespace hospitalManagement
             Console.WriteLine("Update the employee");
 
             Employee res = null;
-            employeeList.ForEach(value =>
+            for (int i = 0; i < employeeList.Count; i++)
             {
-                if (value.Id == id)
-                {
-                    value.Input();
-                    res = value;
-                }
-            });
+                if (employeeList[i].Id == id)
+                    employeeList[i].Input();
+            }
             if (res == null)
             {
                 Console.WriteLine($"Not found the employee with id:{id}");
@@ -103,15 +103,18 @@ namespace hospitalManagement
             Console.WriteLine("Remove the employee");
 
             bool res = false;
-            employeeList.ForEach(value =>
+            for (int i = 0; i < employeeList.Count; i++)
             {
-                if (value.Id == id)
+                if (employeeList[i].Id == id)
                 {
-                    employeeList.Remove(value);
-                    res = true;
-                    this.Count--;
+                    if (employeeList[i].Id == id)
+                    {
+                        employeeList.Remove(employeeList[i]);
+                        res = true;
+                        this.Count--;
+                    }
                 }
-            });
+            }
             if (res == false)
             {
                 Console.WriteLine($"Not found employee with id: {id}");
@@ -128,13 +131,11 @@ namespace hospitalManagement
         public Employee FindItem(string id)
         {
             Employee res = null;
-            employeeList.ForEach(value =>
+            for (int i = 0; i < employeeList.Count; i++)
             {
-                if (value.Id == id)
-                {
-                    res = value;
-                }
-            });
+                if (employeeList[i].Id == id)
+                    res = employeeList[i];
+            }
             if (res == null)
             {
                 Console.WriteLine($"Not found employee with id: {id}");

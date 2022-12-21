@@ -18,7 +18,9 @@ namespace hospitalManagement
         internal List<Patient> PatientList { get => patientList; set => patientList = value; }
 
         // Constructors
-        public Doctor() { }
+        public Doctor() {
+            patientList = new List<Patient>();
+        }
 
         public Doctor(string id
         , string firstName

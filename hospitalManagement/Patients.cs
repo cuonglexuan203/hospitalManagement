@@ -70,7 +70,10 @@ namespace hospitalManagement
         {
             Console.WriteLine("Show information of all patients");
 
-            patientList.ForEach(value => { value.Output(); Console.WriteLine(); });
+            for (int i = 0; i < patientList.Count; i++)
+            {
+                patientList[i].Output();
+            }
             Console.WriteLine("Done!");
         }
 
@@ -79,14 +82,11 @@ namespace hospitalManagement
             Console.WriteLine("Update the patient");
 
             Patient res = null;
-            patientList.ForEach(value =>
+            for (int i = 0; i < patientList.Count; i++)
             {
-                if (value.Id == id)
-                {
-                    value.Input();
-                    res = value;
-                }
-            });
+                if (patientList[i].Id == id)
+                    patientList[i].Input();
+            }
             if (res == null)
             {
                 Console.WriteLine($"Not found the patient with id:{id}");
@@ -105,15 +105,15 @@ namespace hospitalManagement
             Console.WriteLine("Remove the patient");
 
             bool res = false;
-            patientList.ForEach(value =>
+            for (int i = 0; i < patientList.Count; i++)
             {
-                if (value.Id == id)
+                if (patientList[i].Id == id)
                 {
-                    patientList.Remove(value);
+                    patientList.Remove(patientList[i]);
                     res = true;
                     this.Count--;
                 }
-            });
+            }
             if (res == false)
             {
                 Console.WriteLine($"Not found patient with id: {id}");
